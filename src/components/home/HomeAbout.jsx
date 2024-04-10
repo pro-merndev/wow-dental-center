@@ -18,7 +18,8 @@ const HomeAbout = () => {
     autoPlay: true,
     centerMode: true,
     variableWidth: true,
-    initialSlide: 3,
+    initialSlide: 1,
+    focusOnSelect: true,
   };
   return (
     <section className="py-16 md:py-32">
@@ -98,7 +99,7 @@ const HomeAbout = () => {
                 <div className="px-2 mx-auto" key={i}>
                   <div className={`video_wrapper relative group`}>
                     <video
-                      src="/videos/video.mp4"
+                      src="/videos/video.mov"
                       style={{
                         width: "100%",
                         height: "100%",
@@ -119,8 +120,12 @@ const HomeAbout = () => {
             </Slider>
           </div>
         </div>
-        <div className="absolute top-4 left-0 w-full z-0">
-          <img className="w-full" src="/images/about_cover.png" alt="bg" />
+        <div className="absolute top-12 left-0 w-full z-0 ">
+          <img
+            className="w-full h-[400px]"
+            src="/images/about_cover.png"
+            alt="bg"
+          />
         </div>
       </div>
     </section>
