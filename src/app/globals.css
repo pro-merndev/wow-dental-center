@@ -83,3 +83,10 @@
 body {
   background: var(--background);
 }
+
+/* Image Clip with Text */
+.image-text {
+  background: url("/images/text_bg.jpeg") center center / cover no-repeat;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
