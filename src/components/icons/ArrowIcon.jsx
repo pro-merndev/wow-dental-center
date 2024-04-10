@@ -19,7 +19,7 @@ const ArrowIcon = ({
       <path
         d="M9 1L5 5L1 1"
         stroke={color}
-        stroke-width="2"
+        strokeWidth="2"
         stroke-linecap="round"
         stroke-linejoin="round"
       />
