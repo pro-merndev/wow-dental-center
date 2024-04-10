@@ -57,7 +57,7 @@ const HomeAbout = () => {
               className="hidden md:block"
             />
 
-            <p className="mt-8 max-w-lg text-lg">
+            <p className="mt-8 max-w-xl text-[20px]">
               Dr. Silvana Beraj, DMD, MSc, PhD, stands out in the dental field
               with her extensive education and practice in Fixed Prosthodontics
               and Dental Occlusion, highlighted by her academic journey from
