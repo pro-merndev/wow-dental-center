@@ -3,6 +3,7 @@ import { Input } from "@/shadcn/ui/input";
 import FacebookIcon from "../icons/FacebookIcon";
 import InstagramIcon from "../icons/InstagramIcon";
 import WhatsappIcon from "../icons/WhatsappIcon";
+import PhoneIcon from "../icons/PhoneIcon";
 
 const actions = [
   {
@@ -31,7 +32,7 @@ const Banner = () => {
       }}
     >
       <div className="container">
-        <div className="flex flex-col md:flex-row items-center justify-between gap-6">
+        <div className="flex flex-col lg:flex-row items-center justify-between gap-6">
           {/* Left Side */}
           <div className="basis-7/12">
             <h6 className="font-source text-2xl font-semibold">
@@ -48,7 +49,7 @@ const Banner = () => {
               your smile with cutting-edge treatments in Fort Lauderdale.{" "}
             </p>
 
-            <div className="flex items-center gap-4 flex-wrap mt-10">
+            <div className="hidden md:flex items-center gap-4 flex-wrap mt-10">
               {actions.map((action, index) => (
                 <Button
                   key={index}
@@ -57,6 +58,14 @@ const Banner = () => {
                   {action.label}
                 </Button>
               ))}
+            </div>
+
+            <div className="block md:hidden mt-4">
+              <button className="font-semibold bg-white text-black rounded-2xl flex items-center px-4">
+                <PhoneIcon />
+                <div className="h-[52px] w-[1px] bg-black mx-4"></div>
+                <p>Call (754) 274 0675</p>
+              </button>
             </div>
           </div>
 
