@@ -4,7 +4,7 @@
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
+    --background: #edeef0;
     --foreground: 222.2 84% 4.9%;
 
     --card: 0 0% 100%;
@@ -13,7 +13,7 @@
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
 
-    --primary: 222.2 47.4% 11.2%;
+    --primary: #ff9d00;
     --primary-foreground: 210 40% 98%;
 
     --secondary: 210 40% 96.1%;
@@ -74,4 +74,13 @@
   body {
     @apply bg-background text-foreground;
   }
+}
+
+* {
+  scroll-behavior: smooth;
+}
+
+body {
+  color: #000000;
+  background: var(--background);
 }
