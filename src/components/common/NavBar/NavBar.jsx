@@ -6,6 +6,15 @@ import ArrowIcon from "@/components/icons/ArrowIcon";
 import PhoneIcon from "@/components/icons/PhoneIcon";
 import { useEffect, useState } from "react";
 import MenuIcon from "@/components/icons/MenuIcon";
+import {
+  Sheet,
+  SheetContent,
+  SheetDescription,
+  SheetHeader,
+  SheetTitle,
+  SheetTrigger,
+} from "@/shadcn/ui/sheet";
+import { Button } from "@/shadcn/ui/button";
 
 const navItems = [
   {
@@ -120,9 +129,50 @@ const NavBar = () => {
         </div>
 
         {/* Mobile Menu */}
-        <div className="block md:hidden">
-          <MenuIcon />
-        </div>
+        <Sheet>
+          <SheetTrigger asChild>
+            <Button
+              size="icon"
+              variant="ghost"
+              className="block md:hidden hover:bg-transparent"
+            >
+              <MenuIcon />
+            </Button>
+          </SheetTrigger>
+          <SheetContent className="bg-black/70 backdrop-blur-xl">
+            <Link href="/" className="">
+              <div className="relative mx-auto h-20 w-36">
+                <Image src="/logo/logo.svg" alt="logo" layout="fill" />
+              </div>
+            </Link>
+
+            <div className="mt-12 flex items-start gap-4 flex-col text-white">
+              {navItems?.map((item, index) => (
+                <div key={index} className="w-full py-3 hover:bg-gray-900/70 px-2 rounded-lg">
+                  {item.link ? (
+                    <Link href={item.link}>{item.name}</Link>
+                  ) : (
+                    <div className="relative group">
+                      <div className="flex items-center gap-2 cursor-pointer">
+                        <p className="">{item.name}</p>
+                        <ArrowIcon className="group-hover:rotate-180 duration-300" />
+                      </div>
+                      <div className="absolute hidden group-hover:block top-full left-0 min-w-28 w-full bg-white rounded-lg shadow-lg py-2 px-4 mt-1 duration-300">
+                        {item.children?.map((child, index) => (
+                          <Link key={index} href={child.link}>
+                            <span className="block py-1 text-gray-800">
+                              {child.name}
+                            </span>
+                          </Link>
+                        ))}
+                      </div>
+                    </div>
+                  )}
+                </div>
+              ))}
+            </div>
+          </SheetContent>
+        </Sheet>
       </div>
     </nav>
   );
