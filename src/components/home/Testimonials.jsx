@@ -43,7 +43,7 @@ const Testimonials = () => {
   };
 
   return (
-    <section className="pb-16 md:pb-32">
+    <section className="py-16 md:py-32">
       <div className="container">
         <div className="flex items-end gap-8">
           {/* Left Side */}
