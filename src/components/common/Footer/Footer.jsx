@@ -9,8 +9,8 @@ const Footer = () => {
   return (
     <footer>
       <div className="py-20 bg-[url('/images/footer-bg.png')] bg-cover bg-center bg-no-repeat  ">
-        <div className="container grid grid-cols-10 gap-5 text-white">
-          <div className="col-span-4">
+        <div className="container grid grid-cols-10 lg:gap-x-10 gap-y-10 text-white">
+          <div className="xl:col-span-4 lg:col-span-3 col-span-10 max-lg:flex max-lg:justify-center max-lg:items-center">
             <div className="w-fit">
               <div className="flex flex-col justify-center items-center">
                 <Link href="/">
@@ -36,9 +36,9 @@ const Footer = () => {
               </div>
             </div>
           </div>
-          <div className="col-span-6">
-            <div className="grid grid-cols-11 gap-10">
-              <div className="col-span-3">
+          <div className="xl:col-span-6 lg:col-span-7 col-span-10">
+            <div className="grid sm:grid-cols-11 grid-cols-1 gap-10">
+              <div className="sm:col-span-3 max-sm:text-center">
                 <h5 className="tracking-[0.3rem] uppercase font-semibold mb-6 ">OVERVIEW</h5>
                 <div>
                   <ul className="flex flex-col gap-4">
@@ -60,7 +60,7 @@ const Footer = () => {
                   </ul>
                 </div>
               </div>
-              <div className="col-span-4">
+              <div className="sm:col-span-4 max-sm:text-center">
                 <h5 className="tracking-[0.3rem] uppercase font-semibold mb-6 ">SERVICES</h5>
                 <div>
                   <ul className="flex flex-col gap-4">
@@ -85,7 +85,7 @@ const Footer = () => {
                   </ul>
                 </div>
               </div>
-              <div className="col-span-4">
+              <div className="sm:col-span-4 max-sm:text-center">
                 <h5 className="tracking-[0.3rem] uppercase font-semibold mb-6 ">CONTACT</h5>
                 <div>
                   <ul className="flex flex-col gap-4">
