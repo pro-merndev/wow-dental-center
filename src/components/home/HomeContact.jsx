@@ -12,7 +12,7 @@ const HomeContact = () => {
 
       <div className="max-lg:flex max-lg:justify-center max-lg:items-center max-lg:container">
         <div className="w-fit">
-          <h3 className="text-primary xl:text-[32px] text-xl  font-bold lg:text-left text-center">Got More Questions?</h3>
+          <h3 className="text-primary xl:text-[32px] text-xl  font-bold lg:text-left text-center font-copperPlate">Got More Questions?</h3>
           <h2 className="xl:text-[64px] text-[32px] font-bold lg:text-left text-center font-source">Say Hi To The Team</h2>
           <p className="xl:text-[20px] text-sm  max-w-xl lg:text-left text-center mb-5 lg:mb-0">
             Reach out to our dedicated team for any inquiries or support, and let&apos;s start a conversation that makes a difference.
