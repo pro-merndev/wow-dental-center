@@ -14,7 +14,7 @@ const Welcome = () => {
           description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
         />
 
-        <div className="flex justify-center gap-6 mt-10">
+        <div className="flex justify-center flex-wrap gap-6 mt-10">
           <Button className=" rounded-e-3xl rounded-es-3xl rounded-ss-none shadow-xl">
             <InterfaceIcon height={15} width={15} />
             <span className="font-copperPlate text-[20px] ml-3">Learn More</span>
