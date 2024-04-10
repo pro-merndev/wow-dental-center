@@ -19,7 +19,7 @@ const MenuIcon = ({
       <path
         d="M1 11H15M1 6H15M1 1H15"
         stroke={color}
-        stroke-width="2"
+        strokeWidth="2"
         stroke-linecap="round"
         stroke-linejoin="round"
       />

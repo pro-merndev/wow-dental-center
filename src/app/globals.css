@@ -93,3 +93,22 @@ body {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
+
+.video_wrapper {
+  width: 87px;
+  height: 405px;
+  border-radius: 55px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.video_wrapper:hover {
+  width: 257px;
+  border-radius: 16px;
+}
+
+.slick-active .video_wrapper {
+  width: 257px !important;
+  border-radius: 16px;
+}
