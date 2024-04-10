@@ -5,7 +5,6 @@ const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 
 import localFont from "next/font/local";
 
-// Font files can be colocated inside of `pages`
 const satoshiFont = localFont({
   src: "./font/Satoshi-Variable.ttf",
   variable: "--font-satoshi",
@@ -14,6 +13,11 @@ const satoshiFont = localFont({
 const sourceFont = localFont({
   src: "./font/SourceSerifPro-Bold.otf",
   variable: "--font-source",
+});
+
+const copperPlateFont = localFont({
+  src: "./font/Copperplate.otf",
+  variable: "--font-copperplate",
 });
 
 export const metadata = {
@@ -39,7 +43,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${inter.variable} ${satoshiFont.variable} ${sourceFont.variable} font-sans`}
+        className={`${inter.variable} ${satoshiFont.variable} ${sourceFont.variable} ${copperPlateFont.variable} font-sans`}
       >
         {children}
       </body>

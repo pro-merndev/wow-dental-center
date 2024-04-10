@@ -1,8 +1,21 @@
+"use client";
+
+/* eslint-disable @next/next/no-img-element */
 import { Button } from "@/shadcn/ui/button";
 import SectionHeading from "../common/Section/SectionHeading";
 import Image from "next/image";
+import Slider from "react-slick";
 
 const HomeAbout = () => {
+  const settings = {
+    dots: false,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    centerMode: true,
+    variableWidth: true,
+  };
   return (
     <section className="py-16 md:py-32">
       <div className="container">
@@ -53,18 +66,34 @@ const HomeAbout = () => {
             <p className="my-4 font-bold text-lg">
               arcu non sodales neque sodales ut etiam sit
             </p>
-            <div className="flex items-center gap-3 md:gap-6">
-              <Button className="hover:shadow-2xl px-8 font-semibold">
+            <div className="flex flex-col sm:flex-row items-center gap-3 md:gap-6">
+              <Button className="hover:shadow-2xl px-8 font-semibold max-md:w-full">
                 Read More
               </Button>
               <Button
                 variant="outline"
-                className="hover:shadow-2xl px-8 font-semibold border-black"
+                className="hover:shadow-2xl px-8 font-semibold border-black max-md:w-full"
               >
                 Specialized Tools
               </Button>
             </div>
           </div>
+        </div>
+      </div>
+
+      <div className="mt-12 relative min-h-[330px]">
+        <div className="relative z-10">
+          <h5 className="font-copperPlate text-2xl font-bold text-center">
+            Great Work In Action
+          </h5>
+
+          {/* Carousel Slider */}
+          <div>
+            <Slider {...settings}></Slider>
+          </div>
+        </div>
+        <div className="absolute top-4 left-0 w-full z-0">
+          <img className="w-full" src="/images/about_cover.png" alt="bg" />
         </div>
       </div>
     </section>

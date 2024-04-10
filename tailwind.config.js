@@ -55,6 +55,7 @@ module.exports = {
       fontFamily: {
         sans: ["var(--font-satoshi)", "Inter", "sans-serif"],
         source: ["var(--font-source)", "serif"],
+        copperPlate: ["var(--font-copperplate)", "serif"],
       },
       borderRadius: {
         lg: "var(--radius)",

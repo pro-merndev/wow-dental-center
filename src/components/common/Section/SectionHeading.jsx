@@ -14,7 +14,7 @@ const SectionHeading = ({
     >
       {subtitle && (
         <h5
-          className={`text-primary text-xl font-semibold md:text-2xl leading-[20px] md:leading-[24px] mb-2
+          className={`font-copperPlate text-primary text-xl font-semibold md:text-2xl leading-[20px] md:leading-[24px] mb-2
           ${!leftAlign ? "mx-auto text-center" : "mr-auto text-left"}
           `}
         >
