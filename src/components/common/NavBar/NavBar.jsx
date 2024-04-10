@@ -39,7 +39,7 @@ const navItems = [
 const NavBar = () => {
   return (
     <nav className="fixed w-full top-0 left-0 z-50">
-      <div className="container flex items-center justify-between py-2">
+      <div className="container  flex items-center justify-between py-2">
         {/* Left Side */}
         <Link href="/">
           <div className="relative h-20 w-36">
