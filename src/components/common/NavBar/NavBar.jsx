@@ -3,6 +3,9 @@
 import Link from "next/link";
 import Image from "next/image";
 import ArrowIcon from "@/components/icons/ArrowIcon";
+import PhoneIcon from "@/components/icons/PhoneIcon";
+import { useEffect, useState } from "react";
+import MenuIcon from "@/components/icons/MenuIcon";
 
 const navItems = [
   {
@@ -37,8 +40,29 @@ const navItems = [
 ];
 
 const NavBar = () => {
+  const [scrolled, setScrolled] = useState(false);
+
+  // Add scroll event listener
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 100) {
+        setScrolled(true);
+      } else {
+        setScrolled(false);
+      }
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
-    <nav className="fixed w-full top-0 left-0 z-50">
+    <nav
+      className={`fixed w-full top-0 left-0 z-50 ${
+        scrolled ? "bg-black/60 backdrop-blur-lg" : ""
+      }`}
+    >
       <div className="container  flex items-center justify-between py-2">
         {/* Left Side */}
         <Link href="/">
@@ -48,7 +72,7 @@ const NavBar = () => {
         </Link>
 
         {/* Middle Nav Links */}
-        <div className="flex items-center gap-12 text-white">
+        <div className="hidden md:flex items-center gap-12 text-white">
           {navItems?.map((item, index) => (
             <div key={index} className="">
               {item.link ? (
@@ -72,6 +96,32 @@ const NavBar = () => {
               )}
             </div>
           ))}
+        </div>
+
+        {/* Right Side */}
+        <div className="hidden lg:block font-bold relative">
+          <div>
+            <button className="bg-white rounded-2xl flex items-center px-4">
+              <PhoneIcon />
+              <div className="h-[52px] w-[1px] bg-black mx-4"></div>
+              <p>Call (754) 274 0675</p>
+            </button>
+          </div>
+          <div
+            className={`${
+              scrolled ? "hidden" : "hidden md:block"
+            } absolute top-full left-0`}
+          >
+            <p className="text-white my-4">Monday - Friday, 9AM to 6PM</p>
+            <p className="text-white max-w-xs">
+              3000 E Commercial Blvd, Fort Lauderdale, FL 33308
+            </p>
+          </div>
+        </div>
+
+        {/* Mobile Menu */}
+        <div className="block md:hidden">
+          <MenuIcon />
         </div>
       </div>
     </nav>
