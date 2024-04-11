@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Slider from "react-slick";
 import PlayIcon from "../icons/PlayIcon";
 
@@ -42,6 +42,13 @@ const Testimonials = () => {
       }
     }
   };
+
+  useEffect(() => {
+    const video = videoRef.current;
+    if (video) {
+      video.paused || video.ended ? setPaused(true) : setPaused(false);
+    }
+  }, []);
 
   const settings = {
     dots: false,
