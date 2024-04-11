@@ -12,6 +12,7 @@ const SectionHeading = ({
         !leftAlign ? "mx-auto text-center" : "text-left"
       } ${className ? className : ""}`}
       // data-aos="fade-up"
+      // data-aos-once="false"
     >
       {subtitle && (
         <h5

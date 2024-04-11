@@ -57,7 +57,7 @@ const WhatWeDo = () => {
           {data.map((item, index) => (
             <div
               key={index}
-              className="bg-white rounded-es-[2.5rem] rounded-se-[2.5rem] z-20 shadow-primaryShadow"
+              className="bg-white rounded-es-[2.5rem] rounded-se-[2.5rem] z-20 shadow-primaryShadow h-full relative pb-16"
               data-aos="fade-up"
               data-aos-delay={index * 100}
             >
@@ -68,13 +68,14 @@ const WhatWeDo = () => {
                   className="w-full h-full"
                 />
                 <div className="sm:p-10 p-5">
-                  <h3 className="font-source sm:text-2xl font-bold text-center px-5 sm:min-w-[203px] sm:h-[66px]  mx-auto">
+                  <h3 className="font-source sm:text-2xl md:text-3xl font-bold text-center px-5 sm:min-w-[203px] mx-auto">
                     {item.title}
                   </h3>
-                  <p className="text-center sm:mt-3 sm:h-[88px]  max-sm:text-[12px]">
+                  <p className="text-center text-lg sm:mt-3 max-sm:text-base font-medium">
                     {item.description}
                   </p>
-                  <div className="flex justify-center mt-5">
+
+                  <div className="absolute bottom-4 md:bottom-8 left-1/2 -translate-x-1/2">
                     <Button className=" rounded-e-3xl rounded-es-3xl rounded-ss-none shadow-xl">
                       <InterfaceIcon height={15} width={15} />
                       <span className="font-copperPlate text-lg ml-3">
@@ -90,7 +91,7 @@ const WhatWeDo = () => {
 
         <div className="flex justify-center mt-10 max-sm:hidden">
           <Button className=" rounded-3xl shadow-xl">
-            <WarningIcon height={15} width={15} />
+            <WarningIcon size={20} />
             <span className="font-copperPlate text-lg ml-3">
               Emergency Dentistry Available
             </span>
