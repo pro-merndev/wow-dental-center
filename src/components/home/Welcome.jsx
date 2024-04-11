@@ -12,6 +12,7 @@ const Welcome = () => {
           subtitle="Welcome To"
           title="Waves of Welcoming Dental Center"
           description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+          bigTitle
         />
 
         <div className="flex justify-center flex-wrap gap-6 mt-10">
@@ -21,14 +22,20 @@ const Welcome = () => {
           </Button>
           <Button className=" rounded-e-3xl rounded-es-3xl rounded-ss-none shadow-xl bg-primary">
             <InterfaceIcon height={15} width={15} />
-            <span className="font-copperPlate text-lg ml-3">Schedule Appointment</span>
+            <span className="font-copperPlate text-lg ml-3">
+              Schedule Appointment
+            </span>
           </Button>
         </div>
       </div>
       <div className="py-20">
-      <Marquee autoFill >
+        <Marquee autoFill>
           <div className="relative sm:h-[184px] sm:w-[296px] h-[129px] w-[207px] mx-3">
-            <Image src="/images/welcome-image.png" alt="gallery" layout="fill" />
+            <Image
+              src="/images/welcome-image.png"
+              alt="gallery"
+              layout="fill"
+            />
           </div>
         </Marquee>
       </div>

@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import { Button } from "@/shadcn/ui/button";
 import SectionHeading from "../common/Section/SectionHeading";
 import InterfaceIcon from "../icons/InterfaceIcon";
@@ -49,6 +50,7 @@ const WhatWeDo = () => {
         <SectionHeading
           title="WHAT WE DO"
           description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+          bigTitle
         />
 
         <div className="grid xl:grid-cols-3 lg:grid-cols-2 grid-cols-1 gap-7 mt-10 sm:p-10 ">
