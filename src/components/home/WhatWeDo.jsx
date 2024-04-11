@@ -12,12 +12,14 @@ const data = [
   },
   {
     title: "Cosmetic Dentistry",
-    description: "Cosmetic Dentistry focuses on enhancing the beauty of your smile, ensuring both oral health and aesthetic appeal are prioritized.",
+    description:
+      "Cosmetic Dentistry focuses on enhancing the beauty of your smile, ensuring both oral health and aesthetic appeal are prioritized.",
     image: "/images/what-we-do-2.png",
   },
   {
     title: "General Dentistry",
-    description: "General Dentistry encompasses a broad range of services aimed at preserving and maintaining your overall oral health.",
+    description:
+      "General Dentistry encompasses a broad range of services aimed at preserving and maintaining your overall oral health.",
     image: "/images/what-we-do-3.png",
   },
   {
@@ -51,16 +53,29 @@ const WhatWeDo = () => {
 
         <div className="grid xl:grid-cols-3 lg:grid-cols-2 grid-cols-1 gap-7 mt-10 sm:p-10 ">
           {data.map((item, index) => (
-            <div key={index} className="bg-white rounded-es-[2.5rem] rounded-se-[2.5rem] z-20">
+            <div
+              key={index}
+              className="bg-white rounded-es-[2.5rem] rounded-se-[2.5rem] z-20"
+            >
               <div>
-                <img src={item.image} alt="what-we-do" className="w-full h-full" />
+                <img
+                  src={item.image}
+                  alt="what-we-do"
+                  className="w-full h-full"
+                />
                 <div className="sm:p-10 p-5">
-                  <h3 className="font-source sm:text-2xl font-bold text-center px-5 sm:min-w-[203px] sm:h-[66px]  mx-auto">{item.title}</h3>
-                  <p className="text-center sm:mt-3 sm:h-[88px]  max-sm:text-[12px]">{item.description}</p>
+                  <h3 className="font-source sm:text-2xl font-bold text-center px-5 sm:min-w-[203px] sm:h-[66px]  mx-auto">
+                    {item.title}
+                  </h3>
+                  <p className="text-center sm:mt-3 sm:h-[88px]  max-sm:text-[12px]">
+                    {item.description}
+                  </p>
                   <div className="flex justify-center mt-5">
                     <Button className=" rounded-e-3xl rounded-es-3xl rounded-ss-none shadow-xl">
                       <InterfaceIcon height={15} width={15} />
-                      <span className="font-copperPlate text-[20px] ml-3">Learn More</span>
+                      <span className="font-copperPlate text-lg ml-3">
+                        Learn More
+                      </span>
                     </Button>
                   </div>
                 </div>
@@ -72,7 +87,9 @@ const WhatWeDo = () => {
         <div className="flex justify-center mt-10 max-sm:hidden">
           <Button className=" rounded-3xl shadow-xl">
             <WarningIcon height={15} width={15} />
-            <span className="font-copperPlate text-[20px] ml-3">Emergency Dentistry AVAILABLE</span>
+            <span className="font-copperPlate text-lg ml-3">
+              Emergency Dentistry Available
+            </span>
           </Button>
         </div>
       </div>

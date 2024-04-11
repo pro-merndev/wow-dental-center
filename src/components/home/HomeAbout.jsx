@@ -57,7 +57,7 @@ const HomeAbout = () => {
               className="hidden md:block"
             />
 
-            <p className="mt-8 max-w-xl text-[20px]">
+            <p className="mt-8 max-w-xl text-lg">
               Dr. Silvana Beraj, DMD, MSc, PhD, stands out in the dental field
               with her extensive education and practice in Fixed Prosthodontics
               and Dental Occlusion, highlighted by her academic journey from
@@ -72,12 +72,18 @@ const HomeAbout = () => {
               arcu non sodales neque sodales ut etiam sit
             </p>
             <div className="flex flex-col sm:flex-row items-center gap-3 md:gap-6">
-              <Button className="hover:shadow-2xl px-8 font-semibold max-md:w-full">
+              <Button
+                className="text-lg px-12 font-semibold max-md:w-full"
+                style={{
+                  boxShadow: "11px 11px 22px 0px #98989A",
+                }}
+              >
                 Read More
               </Button>
               <Button
                 variant="outline"
-                className="hover:shadow-2xl px-8 font-semibold border-black max-md:w-full"
+                className="text-lg px-12 font-semibold border-black max-md:w-full"
+                style={{ boxShadow: "-11px -11px 22px 0px #FFFFFF" }}
               >
                 Specialized Tools
               </Button>
@@ -93,7 +99,7 @@ const HomeAbout = () => {
           </h5>
 
           {/* Carousel Slider */}
-          <div className="relative mt-8">
+          <div className="relative mt-8 max-w-[1400px] mx-auto">
             <Slider {...settings} className="mx-auto text-center">
               {Array.from({ length: 6 }).map((_, i) => (
                 <div className="px-2 mx-auto" key={i}>

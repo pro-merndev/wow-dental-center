@@ -98,7 +98,7 @@ const Banner = () => {
 
       {/* Social Icons */}
       <div className="absolute bottom-8 left-1/2 max-md:-translate-x-1/2 md:left-8">
-        <div className="flex flex-row md:flex-col gap-4">
+        <div className="flex flex-row md:flex-col gap-7">
           <a href="">
             <FacebookIcon />
           </a>

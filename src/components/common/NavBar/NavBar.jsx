@@ -68,7 +68,7 @@ const NavBar = () => {
 
   return (
     <nav
-      className={`fixed w-full top-0 left-0 z-50 ${
+      className={`absolute w-full top-0 left-0 z-50 ${
         scrolled ? "bg-black/60 backdrop-blur-lg" : ""
       }`}
     >
@@ -83,7 +83,7 @@ const NavBar = () => {
         {/* Middle Nav Links */}
         <div className="hidden md:flex items-center gap-12 text-white">
           {navItems?.map((item, index) => (
-            <div key={index} className="">
+            <div key={index} className="font-semibold">
               {item.link ? (
                 <Link href={item.link}>{item.name}</Link>
               ) : (
@@ -108,9 +108,9 @@ const NavBar = () => {
         </div>
 
         {/* Right Side */}
-        <div className="hidden lg:block font-bold relative">
+        <div className="hidden lg:block relative">
           <div>
-            <button className="bg-white rounded-2xl flex items-center px-4">
+            <button className="bg-white rounded-2xl flex items-center px-4 font-bold">
               <PhoneIcon />
               <div className="h-[52px] w-[1px] bg-black mx-4"></div>
               <p>Call (754) 274 0675</p>
@@ -119,7 +119,7 @@ const NavBar = () => {
           <div
             className={`${
               scrolled ? "hidden" : "hidden md:block"
-            } absolute top-full left-0`}
+            } absolute top-full left-0 font-medium`}
           >
             <p className="text-white my-4">Monday - Friday, 9AM to 6PM</p>
             <p className="text-white max-w-xs">
