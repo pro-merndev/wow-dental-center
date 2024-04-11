@@ -56,6 +56,8 @@ const WhatWeDo = () => {
             <div
               key={index}
               className="bg-white rounded-es-[2.5rem] rounded-se-[2.5rem] z-20"
+              data-aos="fade-up"
+              data-aos-delay={index * 100}
             >
               <div>
                 <img
