@@ -107,12 +107,10 @@ body {
 
 .video_wrapper:hover {
   width: 257px;
-  height: 420px;
   border-radius: 16px;
 }
 
 .slick-active .video_wrapper {
   width: 257px !important;
   border-radius: 16px;
-  height: 420px;
 }
