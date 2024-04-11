@@ -17,7 +17,10 @@ const HomeAbout = () => {
         />
         <div className="flex items-center flex-col md:flex-row gap-8 md:gap-32">
           {/* Left Side */}
-          <div className="relative max-md:mt-8" data-aos="fade-up">
+          <div
+            className="max-md:ml-8 max-md:mr-12 relative max-md:mt-8"
+            data-aos="fade-up"
+          >
             <Image
               src="/images/about.png"
               alt="about"
@@ -43,7 +46,7 @@ const HomeAbout = () => {
               className="hidden md:block"
             />
 
-            <p className="mt-8 max-w-xl text-lg">
+            <p className="mt-8 max-w-xl text-lg max-md:text-xs">
               Dr. Silvana Beraj, DMD, MSc, PhD, stands out in the dental field
               with her extensive education and practice in Fixed Prosthodontics
               and Dental Occlusion, highlighted by her academic journey from
@@ -54,16 +57,16 @@ const HomeAbout = () => {
               presentations.{" "}
             </p>
 
-            <p className="my-4 font-bold text-lg">
+            <p className="my-4 font-bold text-lg max-md:text-xs">
               arcu non sodales neque sodales ut etiam sit
             </p>
             <div className="flex flex-col sm:flex-row items-center gap-3 md:gap-6">
-              <Button className="text-lg px-12 font-semibold max-md:w-full shadow-primaryShadow">
+              <Button className="max-md:text-xs text-lg px-12 font-semibold max-md:w-full shadow-primaryShadow">
                 Read More
               </Button>
               <Button
                 variant="outline"
-                className="text-lg px-12 font-semibold border-black max-md:w-full"
+                className="max-md:text-xs text-lg px-12 font-semibold border-black max-md:w-full"
                 style={{ boxShadow: "-11px -11px 22px 0px #FFFFFF" }}
               >
                 Specialized Tools
