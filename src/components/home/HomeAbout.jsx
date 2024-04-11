@@ -31,7 +31,8 @@ const HomeAbout = () => {
           className="block md:hidden"
         />
         <div className="flex items-center flex-col md:flex-row gap-8 md:gap-32">
-          <div className="relative max-md:mt-8">
+          {/* Left Side */}
+          <div className="relative max-md:mt-8" data-aos="fade-up">
             <Image
               src="/images/about.png"
               alt="about"
@@ -49,7 +50,7 @@ const HomeAbout = () => {
             />
           </div>
 
-          <div>
+          <div data-aos="fade-up">
             <SectionHeading
               subtitle="Fort Lauderdale, FL"
               title="Meet Your Dentist, Silvana Beraj DMD"

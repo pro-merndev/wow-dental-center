@@ -34,7 +34,7 @@ const Banner = () => {
       <div className="container">
         <div className="flex flex-col lg:flex-row items-center justify-between gap-6">
           {/* Left Side */}
-          <div className="basis-7/12">
+          <div className="basis-7/12" data-aos="fade-up">
             <h6 className="font-source text-2xl font-semibold">
               Fort Lauderdale, FL
             </h6>
@@ -70,7 +70,10 @@ const Banner = () => {
           </div>
 
           {/* Right Side Form */}
-          <div className="basis-5/12 bg-[#D9D9D9] bg-opacity-25 border border-white p-4 md:p-10">
+          <div
+            className="basis-5/12 bg-[#D9D9D9] bg-opacity-25 border border-white p-4 md:p-10"
+            data-aos="fade-up"
+          >
             <div className="flex flex-col gap-6 text-black">
               <Input placeholder="Name" />
               <Input placeholder="Email" />
