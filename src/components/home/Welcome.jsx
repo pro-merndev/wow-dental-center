@@ -16,11 +16,11 @@ const Welcome = () => {
         />
 
         <div className="flex justify-center flex-wrap gap-6 mt-10">
-          <Button className=" rounded-e-3xl rounded-es-3xl rounded-ss-none shadow-xl">
+          <Button className=" rounded-e-3xl rounded-es-3xl rounded-ss-none shadow-primaryShadow">
             <InterfaceIcon height={15} width={15} />
             <span className="font-copperPlate text-lg ml-3">Learn More</span>
           </Button>
-          <Button className=" rounded-e-3xl rounded-es-3xl rounded-ss-none shadow-xl bg-primary">
+          <Button className=" rounded-e-3xl rounded-es-3xl rounded-ss-none shadow-primaryShadow bg-primary">
             <InterfaceIcon height={15} width={15} />
             <span className="font-copperPlate text-lg ml-3">
               Schedule Appointment

@@ -57,6 +57,9 @@ module.exports = {
         source: ["var(--font-source)", "serif"],
         copperPlate: ["var(--font-copperplate)", "serif"],
       },
+      boxShadow: {
+        primaryShadow: "11px 11px 22px 0 #98989A",
+      },
       borderRadius: {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",

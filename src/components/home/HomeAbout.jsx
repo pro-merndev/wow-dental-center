@@ -73,12 +73,7 @@ const HomeAbout = () => {
               arcu non sodales neque sodales ut etiam sit
             </p>
             <div className="flex flex-col sm:flex-row items-center gap-3 md:gap-6">
-              <Button
-                className="text-lg px-12 font-semibold max-md:w-full"
-                style={{
-                  boxShadow: "11px 11px 22px 0px #98989A",
-                }}
-              >
+              <Button className="text-lg px-12 font-semibold max-md:w-full shadow-primaryShadow">
                 Read More
               </Button>
               <Button

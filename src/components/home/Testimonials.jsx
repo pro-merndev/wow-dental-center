@@ -43,8 +43,8 @@ const Testimonials = () => {
   };
 
   return (
-    <section className="py-16 md:py-32">
-      <div className="container">
+    <section className="py-16 md:py-32 relative">
+      <div className="container relative z-10">
         <div className="flex items-end gap-8">
           {/* Left Side */}
           <div className="w-full lg:w-7/12 pb-24">
@@ -178,6 +178,20 @@ const Testimonials = () => {
           </div>
         </div>
       </div>
+
+      {/* bg elements */}
+      <div
+        className="hidden lg:block absolute top-32 left-0 z-0 h-[100px] w-full bg-[#EDEEF0]"
+        style={{
+          boxShadow: "0px 11px 22px 0px #98989A inset",
+        }}
+      ></div>
+      <div
+        className="hidden lg:block absolute bottom-40 left-0 z-0 h-[188px] w-full bg-[#EDEEF0]"
+        style={{
+          boxShadow: "0px 11px 22px 0px #98989A inset",
+        }}
+      ></div>
     </section>
   );
 };

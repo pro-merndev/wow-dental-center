@@ -57,7 +57,7 @@ const WhatWeDo = () => {
           {data.map((item, index) => (
             <div
               key={index}
-              className="bg-white rounded-es-[2.5rem] rounded-se-[2.5rem] z-20"
+              className="bg-white rounded-es-[2.5rem] rounded-se-[2.5rem] z-20 shadow-primaryShadow"
               data-aos="fade-up"
               data-aos-delay={index * 100}
             >
