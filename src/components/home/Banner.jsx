@@ -35,8 +35,11 @@ const Banner = () => {
         <div className="flex flex-col lg:flex-row items-center justify-between gap-6">
           {/* Left Side */}
           <div className="basis-7/12" data-aos="fade-up">
-            <h6 className="font-source text-2xl font-semibold">
+            <h6 className="hidden md:block font-source text-2xl font-semibold">
               Fort Lauderdale, FL
+            </h6>
+            <h6 className="block md:hidden font-source font-semibold max-w-[185px] mb-4">
+              3000 E Commercial Blvd, Fort Lauderdale, FL
             </h6>
             <h1 className="font-source text-5xl md:text-[96px] font-bold leading-[48px] md:leading-[96px]">
               <span className="text-primary">
@@ -44,7 +47,7 @@ const Banner = () => {
               </span>{" "}
               Dental Center
             </h1>
-            <p className="mt-5 max-w-md text-lg">
+            <p className="mt-5 max-w-md text-lg max-md:text-base max-md:max-w-sm">
               Discover unparalleled dental care that transforms and revitalizes
               your smile with cutting-edge treatments in Fort Lauderdale.{" "}
             </p>
@@ -60,10 +63,10 @@ const Banner = () => {
               ))}
             </div>
 
-            <div className="block md:hidden mt-4">
-              <button className="font-semibold bg-white text-black rounded-2xl flex items-center px-4">
-                <PhoneIcon />
-                <div className="h-[52px] w-[1px] bg-black mx-4"></div>
+            <div className="block md:hidden my-8">
+              <button className="font-semibold bg-white text-black rounded-xl flex items-center px-2 text-sm">
+                <PhoneIcon size={12} />
+                <div className="h-10 w-[1px] bg-black mx-4"></div>
                 <p>Call (754) 274 0675</p>
               </button>
             </div>
@@ -71,7 +74,7 @@ const Banner = () => {
 
           {/* Right Side Form */}
           <div
-            className="basis-5/12 bg-[#D9D9D9] bg-opacity-25 border border-white p-4 md:p-10"
+            className="w-full md:basis-5/12 bg-[#D9D9D9] bg-opacity-25 border border-white p-4 md:p-10"
             data-aos="fade-up"
           >
             <div className="flex flex-col gap-6 text-black">
@@ -83,17 +86,20 @@ const Banner = () => {
               </Button>
             </div>
 
-            <div className="mt-12 flex items-center justify-between gap-4">
+            <div className="mt-12 flex flex-col md:flex-row items-center max-md:text-center justify-between gap-1 md:gap-4">
               <div>
                 <p className="font-bold">New Patients, Good News</p>
-                <p className="max-w-[230px] mt-2">
+                <p className="max-w-[210px] md:max-w-[230px] mt-2">
                   To welcome new patients, we’re charging only
                 </p>
-                <p className="max-w-[230px] mt-1">
+                <p className="hidden md:block max-w-[230px] mt-1">
                   for a comprehensive dental exam, x-ray and teeth cleaning.
                 </p>
               </div>
-              <p className="text-[96px] font-black text-white">$99</p>
+              <p className="text-[96px] max-md:leading-[96px] font-black text-white">$99</p>
+              <p className="max-w-[220px]">
+                  for a comprehensive dental exam, x-ray and teeth cleaning.
+                </p>
             </div>
           </div>
         </div>

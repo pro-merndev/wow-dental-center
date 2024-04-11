@@ -63,7 +63,7 @@ const NavBar = () => {
       <div className="container  flex items-center justify-between py-2">
         {/* Left Side */}
         <Link href="/">
-          <div className="relative h-20 w-36">
+          <div className="relative max-md:h-[38px] max-md:w-[88px] h-20 w-36">
             <Image src="/logo/logo.svg" alt="logo" layout="fill" />
           </div>
         </Link>
@@ -118,7 +118,7 @@ const NavBar = () => {
             <Button
               size="icon"
               variant="ghost"
-              className="block md:hidden hover:bg-transparent"
+              className="flex md:hidden hover:bg-transparent"
             >
               <MenuIcon />
             </Button>
