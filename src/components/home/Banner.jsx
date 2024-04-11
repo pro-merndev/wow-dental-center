@@ -47,7 +47,7 @@ const Banner = () => {
               </span>{" "}
               Dental Center
             </h1>
-            <p className="mt-5 max-w-md text-lg max-md:text-base max-md:max-w-sm">
+            <p className="mt-5 max-w-[445px] text-lg max-md:text-base max-md:max-w-sm">
               Discover unparalleled dental care that transforms and revitalizes
               your smile with cutting-edge treatments in Fort Lauderdale.{" "}
             </p>
@@ -96,10 +96,12 @@ const Banner = () => {
                   for a comprehensive dental exam, x-ray and teeth cleaning.
                 </p>
               </div>
-              <p className="text-[96px] max-md:leading-[96px] font-black text-white">$99</p>
-              <p className="max-w-[220px]">
-                  for a comprehensive dental exam, x-ray and teeth cleaning.
-                </p>
+              <p className="text-[96px] max-md:leading-[96px] font-black text-white">
+                $99
+              </p>
+              <p className="block md:hidden max-w-[220px]">
+                for a comprehensive dental exam, x-ray and teeth cleaning.
+              </p>
             </div>
           </div>
         </div>

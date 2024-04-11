@@ -2,6 +2,8 @@
 import { useRef, useState } from "react";
 import Slider from "react-slick";
 import PlayIcon from "../icons/PlayIcon";
+import { Button } from "@/shadcn/ui/button";
+import DoubleArrowIcon from "../icons/DoubleArrowIcon";
 
 const GreatWork = () => {
   const sliderRef = useRef(null);
@@ -17,7 +19,7 @@ const GreatWork = () => {
     autoPlay: true,
     centerMode: true,
     variableWidth: true,
-    initialSlide: 2,
+    initialSlide: 1,
     focusOnSelect: true,
   };
   return (
@@ -37,11 +39,34 @@ const GreatWork = () => {
               ref={sliderRef}
             >
               {Array.from({ length: 6 }).map((_, i) => (
-                <div className="px-2 mx-auto" key={i}>
+                <div className="px-4 mx-auto pt-8 pb-16" key={i}>
                   <VideoItem />
                 </div>
               ))}
             </Slider>
+
+            <div className="flex items-center justify-center gap-4">
+              <Button
+                variant="ghost"
+                size="icon"
+                className="rounded-full"
+                onClick={() => sliderRef.current.slickPrev()}
+              >
+                <DoubleArrowIcon size={16} className="rotate-180" />
+              </Button>
+              <p className="font-copperPlate font-bold">
+                Scroll For <br />
+                More Videos
+              </p>
+              <Button
+                variant="ghost"
+                size="icon"
+                className="rounded-full"
+                onClick={() => sliderRef.current.slickNext()}
+              >
+                <DoubleArrowIcon size={16} />
+              </Button>
+            </div>
           </div>
 
           {/* For Large Devices */}
@@ -62,13 +87,6 @@ const GreatWork = () => {
         <img
           className="w-full h-[400px]"
           src="/images/about_cover.png"
-          alt="bg"
-        />
-      </div>
-      <div className="absolute bottom-4 -rotate-[0.5deg] -right-10 w-full -z-10">
-        <img
-          className="w-full h-[156px]"
-          src="/images/about_cover_2.png"
           alt="bg"
         />
       </div>
