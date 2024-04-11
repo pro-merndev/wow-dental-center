@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useRef, useState } from "react";
 import Slider from "react-slick";
 import PlayIcon from "../icons/PlayIcon";
 
@@ -27,6 +27,21 @@ const testimonials = [
 
 const Testimonials = () => {
   const [activeVideo, setActiveVideo] = useState(testimonials[0]);
+  const videoRef = useRef(null);
+  const [paused, setPaused] = useState(true);
+
+  const togglePlayPause = () => {
+    const video = videoRef.current;
+    if (video) {
+      if (video.paused || video.ended) {
+        video.play();
+        setPaused(false);
+      } else {
+        video.pause();
+        setPaused(true);
+      }
+    }
+  };
 
   const settings = {
     dots: false,
@@ -141,10 +156,11 @@ const Testimonials = () => {
 
           {/* Right Side */}
           <div className="hidden lg:block lg:w-5/12 relative">
-            <div className="w-[570px] h-[932px] rounded-tr-3xl rounded-bl-3xl overflow-hidden shadow-2xl ">
+            <div className="w-[520px] h-[832px] rounded-tr-3xl rounded-bl-3xl overflow-hidden shadow-2xl ">
               {activeVideo && (
                 <video
                   src={activeVideo.src}
+                  ref={videoRef}
                   style={{
                     width: "100%",
                     height: "100%",
@@ -170,10 +186,17 @@ const Testimonials = () => {
             </div>
 
             <div
-              className="absolute right-12 bottom-[-35px] w-[70px] h-[70px] bg-[#171717] rounded-full grid place-items-center"
-              style={{ boxShadow: "11px 11px 22px 0px #98989A" }}
+              className="absolute right-12 bottom-[-35px] w-[70px] h-[70px] bg-[#171717] rounded-full grid place-items-center cursor-pointer shadow-primaryShadow"
+              onClick={togglePlayPause}
             >
-              <PlayIcon color="#fff" size={20} />
+              {paused ? (
+                <PlayIcon color="#fff" size={20} />
+              ) : (
+                <div className="flex items-center justify-center gap-2">
+                  <div className="bg-white h-4 w-[3px] rounded"></div>
+                  <div className="bg-white h-4 w-[3px] rounded"></div>
+                </div>
+              )}
             </div>
           </div>
         </div>
@@ -181,7 +204,7 @@ const Testimonials = () => {
 
       {/* bg elements */}
       <div
-        className="hidden lg:block absolute top-32 left-0 z-0 h-[100px] w-full bg-[#EDEEF0]"
+        className="hidden lg:block absolute top-12 left-0 z-0 h-[100px] w-full bg-[#EDEEF0]"
         style={{
           boxShadow: "0px 11px 22px 0px #98989A inset",
         }}

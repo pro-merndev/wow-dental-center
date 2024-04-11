@@ -90,7 +90,7 @@ const WhatWeDo = () => {
         </div>
 
         <div className="flex justify-center mt-10 max-sm:hidden">
-          <Button className=" rounded-3xl shadow-xl">
+          <Button className="rounded-3xl shadow-primaryShadow">
             <WarningIcon size={20} />
             <span className="font-copperPlate text-lg ml-3">
               Emergency Dentistry Available
