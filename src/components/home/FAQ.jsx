@@ -46,9 +46,9 @@ const FAQ = () => {
     <div className="md:pt-20 pt-10 container">
       <h1 className="xl:text-[96px] text-[32px] font-source font-bold max-md:text-center">FAQ</h1>
       <div className="md:grid grid-cols-2 gap-10 hidden">
-        <div className="p-6">
+        <div className="py-6">
           <h3 className="text-[32px] font-bold mb-7">What should I expect during my first visit?</h3>
-          <p className="text-[20px]">
+          <p className="text-lg">
             Your first visit involves a comprehensive dental examination, including digital X-rays, oral health assessment, and a discussion about
             your dental history and goals. This helps us create a tailored treatment plan for you.
           </p>
