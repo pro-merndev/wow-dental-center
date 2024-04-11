@@ -1,20 +1,12 @@
 "use client";
 
-import Link from "next/link";
-import Image from "next/image";
 import ArrowIcon from "@/components/icons/ArrowIcon";
-import PhoneIcon from "@/components/icons/PhoneIcon";
-import { useEffect, useState } from "react";
 import MenuIcon from "@/components/icons/MenuIcon";
-import {
-  Sheet,
-  SheetContent,
-  SheetDescription,
-  SheetHeader,
-  SheetTitle,
-  SheetTrigger,
-} from "@/shadcn/ui/sheet";
+import PhoneIcon from "@/components/icons/PhoneIcon";
 import { Button } from "@/shadcn/ui/button";
+import { Sheet, SheetContent, SheetTrigger } from "@/shadcn/ui/sheet";
+import Image from "next/image";
+import Link from "next/link";
 
 const navItems = [
   {
@@ -49,29 +41,25 @@ const navItems = [
 ];
 
 const NavBar = () => {
-  const [scrolled, setScrolled] = useState(false);
+  // const [scrolled, setScrolled] = useState(false);
 
   // Add scroll event listener
-  useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > 100) {
-        setScrolled(true);
-      } else {
-        setScrolled(false);
-      }
-    };
-    window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
+  // useEffect(() => {
+  //   const handleScroll = () => {
+  //     if (window.scrollY > 100) {
+  //       setScrolled(true);
+  //     } else {
+  //       setScrolled(false);
+  //     }
+  //   };
+  //   window.addEventListener("scroll", handleScroll);
+  //   return () => {
+  //     window.removeEventListener("scroll", handleScroll);
+  //   };
+  // }, []);
 
   return (
-    <nav
-      className={`absolute w-full top-0 left-0 z-50 ${
-        scrolled ? "bg-black/60 backdrop-blur-lg" : ""
-      }`}
-    >
+    <nav className={`absolute w-full top-0 left-0 z-50`}>
       <div className="container  flex items-center justify-between py-2">
         {/* Left Side */}
         <Link href="/">
@@ -116,11 +104,7 @@ const NavBar = () => {
               <p>Call (754) 274 0675</p>
             </button>
           </div>
-          <div
-            className={`${
-              scrolled ? "hidden" : "hidden md:block"
-            } absolute top-full left-0 font-medium`}
-          >
+          <div className={`absolute top-full left-0 font-medium`}>
             <p className="text-white my-4">Monday - Friday, 9AM to 6PM</p>
             <p className="text-white max-w-xs">
               3000 E Commercial Blvd, Fort Lauderdale, FL 33308
@@ -148,7 +132,10 @@ const NavBar = () => {
 
             <div className="mt-12 flex items-start gap-4 flex-col text-white">
               {navItems?.map((item, index) => (
-                <div key={index} className="w-full py-3 hover:bg-gray-900/70 px-2 rounded-lg">
+                <div
+                  key={index}
+                  className="w-full py-3 hover:bg-gray-900/70 px-2 rounded-lg"
+                >
                   {item.link ? (
                     <Link href={item.link}>{item.name}</Link>
                   ) : (
