@@ -48,19 +48,22 @@ const Gallery = () => {
         </div>
       </div>
       <div className="max-md:mt-8">
-        <Marquee autoFill>
-          <div className="relative sm:h-[254px] sm:w-[383px] h-[157px] w-[220px]">
+        <Marquee autoFill className="">
+          <div className="relative md:h-[254px] md:w-[383px] h-[157px] w-[220px]">
             <Image
               src="/images/gallery/pic-1.png"
               alt="gallery"
               layout="fill"
+              // className="p-8"
+              className="p-[22px]"
             />
           </div>
-          <div className="relative sm:h-[254px] sm:w-[383px] h-[157px] w-[220px]">
+          <div className="relative md:h-[254px] md:w-[383px] h-[157px] w-[220px]">
             <Image
               src="/images/gallery/pic-3.png"
               alt="gallery"
               layout="fill"
+              className="p-3"
             />
           </div>
         </Marquee>

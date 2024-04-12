@@ -97,7 +97,7 @@ const Banner = () => {
               </Button>
             </div>
 
-            <div className="mt-[30px] md:mt-12 flex flex-col md:flex-row items-center max-md:text-center justify-between gap-1 md:gap-4">
+            <div className="mt-[30px] md:mt-8 flex flex-col md:flex-row items-center max-md:text-center justify-between gap-1 md:gap-4">
               <div>
                 <p className="md:font-bold font-normal tracking-[0.5px]">
                   New Patients, Good News
@@ -124,13 +124,13 @@ const Banner = () => {
       <div className="absolute md:bottom-8 bottom-16 left-1/2 max-md:-translate-x-1/2 md:left-8">
         <div className="flex flex-row md:flex-col gap-7">
           <a href="">
-            <FacebookIcon />
+            <FacebookIcon size={18} />
           </a>
           <a href="">
-            <InstagramIcon />
+            <InstagramIcon size={18} />
           </a>
           <a href="">
-            <WhatsappIcon />
+            <WhatsappIcon size={18} />
           </a>
         </div>
       </div>

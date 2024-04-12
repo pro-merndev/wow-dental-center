@@ -25,18 +25,18 @@ const Footer = () => {
                 <p className="max-md:text-xs text-center mt-2 mb-6">
                   Opening Hours: Mon-Fri, 9AM - 6PM
                 </p>
-                <div className="flex items-center justify-center gap-6 md:gap-4">
+                <div className="flex items-center justify-center gap-6 md:gap-6">
                   <a href="" className="flex justify-center items-center">
-                    <FacebookIcon size={windowWidth > 768 ? 20 : 12} />
+                    <FacebookIcon size={windowWidth > 768 ? 22 : 14} />
                   </a>
                   <a href="" className="flex justify-center items-center">
-                    <InstagramIcon size={windowWidth > 768 ? 20 : 12} />
+                    <InstagramIcon size={windowWidth > 768 ? 22 : 14} />
                   </a>
                   <a href="" className="flex justify-center items-center">
-                    <WhatsappIcon size={windowWidth > 768 ? 20 : 12} />
+                    <WhatsappIcon size={windowWidth > 768 ? 22 : 14} />
                   </a>
                   <a href="" className="flex justify-center items-center">
-                    <YoutubeIcon size={windowWidth > 768 ? 20 : 12} />
+                    <YoutubeIcon size={windowWidth > 768 ? 22 : 14} />
                   </a>
                 </div>
               </div>
@@ -188,7 +188,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <p className="max-md:text-xs text-center bg-black text-white py-4">
+      <p className="text-xs md:text-sm text-center bg-black text-white py-4">
         Powered With 🤍 By Dental Site Master
       </p>
     </footer>
