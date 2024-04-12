@@ -40,7 +40,7 @@ const SectionHeading = ({
       )}
       {description && (
         <p
-          className={`max-w-xl text-base font-medium md:text-lg ${
+          className={`max-w-[240px] md:max-w-xl text-xs font-medium md:text-lg ${
             !leftAlign ? "mx-auto text-center" : "mr-auto text-left"
           }`}
         >
