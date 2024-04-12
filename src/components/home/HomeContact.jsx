@@ -30,13 +30,13 @@ const HomeContact = () => {
           </p>
           <div className="mt-2 flex flex-col lg:max-w-lg gap-3 md:gap-4">
             <div className="">
-              <Input placeholder="Name" />
+              <Input placeholder="Name" className="py-[20px] pl-[20px]" />
             </div>
             <div className="">
-              <Input placeholder="Email" />
+              <Input placeholder="Email" className="py-[20px] pl-[20px] " />
             </div>
             <div className="">
-              <Textarea placeholder="Message" rows={5} />
+              <Textarea placeholder="Message" rows={5} className="pl-[20px] pt-[10px]" />
             </div>
           </div>
           <div className="lg:max-w-lg w-full mt-3">

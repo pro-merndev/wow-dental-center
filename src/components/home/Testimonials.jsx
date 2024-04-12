@@ -70,7 +70,7 @@ const Testimonials = () => {
   return (
     <section className="py-12 md:py-32 relative">
       <div className="md:container relative z-10">
-        <div className="lg:flex lg:items-end lg:gap-8">
+        <div className="lg:flex lg:items-end lg:gap-8 w-full md:w-[85%] mx-auto">
           {/* Left Side */}
           <div className="w-full lg:w-7/12 lg:pb-24">
             <div
@@ -106,7 +106,7 @@ const Testimonials = () => {
                 {testimonials.map((item, i) => (
                   <div
                     key={i}
-                    className="w-full h-[310px] rounded-3xl overflow-hidden shadow-2xl"
+                    className="w-full h-[310px] md:w-[192px] rounded-3xl overflow-hidden shadow-2xl"
                     onClick={() => setActiveVideo(item)}
                   >
                     <video
