@@ -20,8 +20,8 @@ const MenuIcon = ({
         d="M1 11H15M1 6H15M1 1H15"
         stroke={color}
         strokeWidth="2"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
     </svg>
   );

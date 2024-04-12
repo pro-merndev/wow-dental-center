@@ -1,4 +1,11 @@
-const InterfaceIcon = ({ size, width = 20, height = 20, color = "white", className, ...rest }) => {
+const InterfaceIcon = ({
+  size,
+  width = 20,
+  height = 20,
+  color = "white",
+  className,
+  ...rest
+}) => {
   return (
     <svg
       width={size || width}
@@ -14,8 +21,8 @@ const InterfaceIcon = ({ size, width = 20, height = 20, color = "white", classNa
         // fill={color}
         stroke={color}
         strokeWidth="2"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
     </svg>
   );

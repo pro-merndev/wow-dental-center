@@ -125,41 +125,7 @@ const Testimonials = () => {
               <div className="lg:hidden testimonial_slider">
                 <Slider {...settings} ref={sliderRef}>
                   {testimonials.map((item, i) => (
-                    <div key={i} className="px-4 pb-16">
-                      <div className="relative">
-                        <div className="w-[260px] h-[426px] rounded-tr-3xl rounded-bl-3xl overflow-hidden shadow-xl">
-                          <video
-                            src={item.src}
-                            style={{
-                              width: "100%",
-                              height: "100%",
-                              objectFit: "cover",
-                            }}
-                            controls
-                          ></video>
-                        </div>
-
-                        <div
-                          className="absolute left-0 bottom-20  py-4 text-white px-8"
-                          style={{
-                            background:
-                              "linear-gradient(89.97deg, #000000 61.92%, rgba(255, 255, 255, 0) 99.97%)",
-                          }}
-                        >
-                          <p className="text-xl font-semibold font-copperPlate">
-                            {activeVideo?.name}
-                          </p>
-                          <p>{activeVideo?.title}</p>
-                        </div>
-
-                        <div
-                          className="absolute right-12 bottom-[-35px] w-[60px] md:w-[70px] h-[60px] md:h-[70px] bg-[#171717] rounded-full grid place-items-center"
-                          style={{ boxShadow: "11px 11px 22px 0px #98989A" }}
-                        >
-                          <PlayIcon color="#fff" size={20} />
-                        </div>
-                      </div>
-                    </div>
+                    <TestimonialItem key={i} item={item} />
                   ))}
                 </Slider>
 
@@ -251,6 +217,70 @@ const Testimonials = () => {
         }}
       ></div>
     </section>
+  );
+};
+
+// ---- TestimonialItem Component For Small Devices ----
+const TestimonialItem = ({ item }) => {
+  const videoRef = useRef(null);
+  const [paused, setPaused] = useState(true);
+
+  const togglePlayPause = () => {
+    const video = videoRef.current;
+    if (video) {
+      if (video.paused || video.ended) {
+        video.play();
+        setPaused(false);
+      } else {
+        video.pause();
+        setPaused(true);
+      }
+    }
+  };
+
+  return (
+    <div className="px-4 pb-16">
+      <div className="relative">
+        <div className="w-[260px] h-[426px] rounded-tr-3xl rounded-bl-3xl overflow-hidden shadow-xl">
+          <video
+            src={item.src}
+            ref={videoRef}
+            style={{
+              width: "100%",
+              height: "100%",
+              objectFit: "cover",
+            }}
+            controls
+          ></video>
+        </div>
+
+        <div
+          className="absolute left-0 bottom-20  py-4 text-white px-8"
+          style={{
+            background:
+              "linear-gradient(89.97deg, #000000 61.92%, rgba(255, 255, 255, 0) 99.97%)",
+          }}
+        >
+          <p className="text-xl font-semibold font-copperPlate">{item?.name}</p>
+          <p>{item?.title}</p>
+        </div>
+
+        <div
+          className="absolute right-12 bottom-[-35px] w-[60px] md:w-[70px] h-[60px] md:h-[70px] bg-[#171717] rounded-full grid place-items-center"
+          style={{ boxShadow: "11px 11px 22px 0px #98989A" }}
+          onClick={togglePlayPause}
+        >
+          {paused ? (
+            <PlayIcon color="#fff" size={20} />
+          ) : (
+            <div className="flex items-center justify-center gap-2">
+              <div className="bg-white h-4 w-[3px] rounded"></div>
+              <div className="bg-white h-4 w-[3px] rounded"></div>
+            </div>
+          )}
+        </div>
+      </div>
+    </div>
   );
 };
 

@@ -20,8 +20,8 @@ const ArrowIcon = ({
         d="M9 1L5 5L1 1"
         stroke={color}
         strokeWidth="2"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
     </svg>
   );

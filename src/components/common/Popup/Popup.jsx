@@ -105,21 +105,17 @@ const Popup = () => {
             </div>
 
             {/* Right Image */}
-            <div
-              className="absolute right-0 bottom-0 z-0 w-full h-full"
-              style={{
-                background:
-                  "linear-gradient(rgba(0,0,0,.8), rgba(0,0,0,.8)), url('/images/popup.png') no-repeat end center/cover",
-              }}
-            >
-              <Image
-                src="/images/popup.png"
-                width={420}
-                height={572}
-                alt="popup"
-                priority
-                className="hidden lg:block"
-              />
+            <div className="absolute right-0 bottom-0 z-0 max-md:w-full h-full">
+              <div className="relative">
+                <div className="lg:hidden absolute w-full h-full bg-black/80 z-10"></div>
+                <Image
+                  src="/images/popup.png"
+                  width={420}
+                  height={572}
+                  alt="popup"
+                  priority
+                />
+              </div>
             </div>
           </div>
         </div>
