@@ -20,7 +20,7 @@ const Insurance = () => {
       </div>
 
       {/* Big Device Content */}
-      <div className="flex flex-col lg:flex-row items-center justify-center gap-12 lg:gap-14 relative h-full">
+      <div className="flex flex-col lg:flex-row items-center justify-center gap-12 lg:gap-24 relative h-full">
         {/* Left Side */}
         <div className="relative">
           <div className="text-center max-lg:mx-8">

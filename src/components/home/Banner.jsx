@@ -26,7 +26,7 @@ const actions = [
 const Banner = () => {
   return (
     <section
-      className="min-h-[1050px] flex items-center justify-center bg-cover bg-center bg-no-repeat pt-28 pb-36 md:py-40 text-white relative"
+      className="min-h-[100vh] flex items-center justify-center bg-cover bg-center bg-no-repeat pt-28 pb-36 md:py-40 text-white relative"
       style={{
         backgroundImage: "url(/images/banner_bg.png)",
       }}
@@ -56,7 +56,7 @@ const Banner = () => {
               {actions.map((action, index) => (
                 <Button
                   key={index}
-                  className="bg-white text-black px-6 py-2 hover:text-white text-lg font-semibold"
+                  className="bg-white text-black px-6 py-2 hover:text-white text-base font-semibold"
                 >
                   {action.label}
                 </Button>
@@ -67,7 +67,7 @@ const Banner = () => {
               <button className="font-semibold bg-white text-black md:rounded-[17px] rounded-[8px] flex items-center px-2 text-sm w-[202px] md:w-[217px]">
                 <PhoneIcon size={12} className="ml-[6px] md:ml-0" />
                 <div className="h-10 w-[1px] bg-black mx-4"></div>
-                <p className="md:font-bold font-[800px]">Call (754) 274 0675</p>
+                <p className="md:font-bold font-[800px] text-base">Call (754) 274 0675</p>
               </button>
             </div>
           </div>

@@ -22,7 +22,7 @@ const Gallery = () => {
             </p>
             <Button
               variant="outline"
-              className="max-md:h-9 hover:shadow-2xl px-8 font-semibold border-background bg-black text-white mt-6 text-xs md:text-lg"
+              className="max-md:h-9 hover:shadow-2xl px-8 font-semibold border-background bg-black text-white mt-6 text-xs md:text-base"
             >
               See All Photos
             </Button>
@@ -49,7 +49,7 @@ const Gallery = () => {
       </div>
       <div className="max-md:mt-8">
         <Marquee autoFill className="">
-          <div className="relative md:h-[254px] md:w-[383px] h-[157px] w-[220px]">
+          <div className="relative md:h-[300px] md:w-[383px] h-[157px] w-[220px]">
             <Image
               src="/images/gallery/pic-1.png"
               alt="gallery"
@@ -58,7 +58,7 @@ const Gallery = () => {
               className="p-[22px]"
             />
           </div>
-          <div className="relative md:h-[254px] md:w-[383px] h-[157px] w-[220px]">
+          <div className="relative md:h-[300px] md:w-[383px] h-[157px] w-[220px]">
             <Image
               src="/images/gallery/pic-3.png"
               alt="gallery"

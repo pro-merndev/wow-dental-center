@@ -78,7 +78,7 @@ const WhatWeDo = () => {
                   <div className="absolute bottom-4 md:bottom-8 left-1/2 -translate-x-1/2">
                     <Button className="max-md:h-9 rounded-e-3xl rounded-es-3xl rounded-ss-none shadow-xl">
                       <InterfaceIcon height={15} width={15} />
-                      <span className="font-copperPlate text-xs md:text-lg ml-3">
+                      <span className="font-copperPlate text-xs md:text-base ml-3">
                         Learn More
                       </span>
                     </Button>
@@ -92,7 +92,7 @@ const WhatWeDo = () => {
         <div className="flex justify-center mt-10 max-sm:hidden">
           <Button className="max-md:h-9 rounded-3xl shadow-primaryShadow">
             <WarningIcon size={20} />
-            <span className="font-copperPlate text-xs md:text-lg ml-3">
+            <span className="font-copperPlate text-xs md:text-base ml-3">
               Emergency Dentistry Available
             </span>
           </Button>
