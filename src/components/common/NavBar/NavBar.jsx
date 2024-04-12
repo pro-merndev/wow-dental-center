@@ -63,7 +63,7 @@ const NavBar = () => {
       <div className="container  flex items-center justify-between py-2">
         {/* Left Side */}
         <Link href="/">
-          <div className="relative max-md:h-[38px] max-md:w-[88px] h-20 w-36">
+          <div className="relative h-[53px] w-[95px] md:h-20 md:w-36">
             <Image src="/logo/logo.svg" alt="logo" layout="fill" />
           </div>
         </Link>
