@@ -3,6 +3,8 @@
 import { useEffect, useRef, useState } from "react";
 import Slider from "react-slick";
 import PlayIcon from "../icons/PlayIcon";
+import { Button } from "@/shadcn/ui/button";
+import DoubleArrowIcon from "../icons/DoubleArrowIcon";
 
 const testimonials = [
   {
@@ -27,6 +29,7 @@ const testimonials = [
 
 const Testimonials = () => {
   const [activeVideo, setActiveVideo] = useState(testimonials[0]);
+  const sliderRef = useRef(null);
   const videoRef = useRef(null);
   const [paused, setPaused] = useState(true);
 
@@ -52,7 +55,7 @@ const Testimonials = () => {
 
   const settings = {
     dots: false,
-    infinite: false,
+    infinite: true,
     arrows: false,
     speed: 500,
     slidesToShow: 1,
@@ -60,14 +63,14 @@ const Testimonials = () => {
     autoPlay: true,
     centerMode: true,
     variableWidth: true,
-    initialSlide: 1,
+    initialSlide: 0,
     focusOnSelect: true,
   };
 
   return (
-    <section className="py-16 md:py-32 relative">
-      <div className="container relative z-10">
-        <div className="flex items-end gap-8">
+    <section className="py-12 md:py-32 relative">
+      <div className="md:container relative z-10">
+        <div className="lg:flex lg:items-end lg:gap-8">
           {/* Left Side */}
           <div className="w-full lg:w-7/12 pb-24">
             <div
@@ -79,11 +82,13 @@ const Testimonials = () => {
                 Testimonials
               </h5>
               <h2
-                className={`font-source text-4xl font-bold md:text-5xl xl:text-6xl lg:max-w-md `}
+                className={`max-md:max-w-[210px] max-md:text-center font-source text-4xl font-bold md:text-5xl xl:text-6xl lg:max-w-md `}
               >
                 Our Patients Love Us
               </h2>
-              <p className={`max-w-xl text-base font-medium md:text-lg`}>
+              <p
+                className={`max-md:text-center max-w-[290px] md:max-w-xl text-xs font-medium md:text-lg`}
+              >
                 At our practice, we treat each patient with the same warmth and
                 dedication as we would our own family, ensuring a nurturing and
                 supportive healthcare experience. We always go above and beyond
@@ -92,10 +97,11 @@ const Testimonials = () => {
             </div>
 
             <div className="mt-8">
-              <h5 className="font-copperPlate text-2xl font-bold">
+              <h5 className="font-copperPlate text-2xl font-bold hidden lg:block">
                 Patient Review Videos
               </h5>
 
+              {/* For Large Devices */}
               <div className="mt-4 hidden lg:grid grid-cols-3 gap-x-4">
                 {testimonials.map((item, i) => (
                   <div
@@ -115,10 +121,11 @@ const Testimonials = () => {
                 ))}
               </div>
 
-              <div className="mt-4 block lg:hidden">
-                <Slider {...settings}>
+              {/* For Small Devices */}
+              <div className="lg:hidden testimonial_slider">
+                <Slider {...settings} ref={sliderRef}>
                   {testimonials.map((item, i) => (
-                    <div key={i} className="px-2 pb-16">
+                    <div key={i} className="px-4 pb-16">
                       <div className="relative">
                         <div className="w-[260px] h-[426px] rounded-tr-3xl rounded-bl-3xl overflow-hidden shadow-xl">
                           <video
@@ -128,9 +135,7 @@ const Testimonials = () => {
                               height: "100%",
                               objectFit: "cover",
                             }}
-                            autoPlay
                             controls
-                            muted
                           ></video>
                         </div>
 
@@ -148,7 +153,7 @@ const Testimonials = () => {
                         </div>
 
                         <div
-                          className="absolute right-12 bottom-[-35px] w-[70px] h-[70px] bg-[#171717] rounded-full grid place-items-center"
+                          className="absolute right-12 bottom-[-35px] w-[60px] md:w-[70px] h-[60px] md:h-[70px] bg-[#171717] rounded-full grid place-items-center"
                           style={{ boxShadow: "11px 11px 22px 0px #98989A" }}
                         >
                           <PlayIcon color="#fff" size={20} />
@@ -157,6 +162,29 @@ const Testimonials = () => {
                     </div>
                   ))}
                 </Slider>
+
+                <div className="flex items-center justify-center gap-4">
+                  <Button
+                    variant="ghost"
+                    size="icon"
+                    className="rounded-full"
+                    onClick={() => sliderRef.current.slickPrev()}
+                  >
+                    <DoubleArrowIcon size={16} className="rotate-180" />
+                  </Button>
+                  <p className="font-copperPlate font-bold">
+                    Scroll For <br />
+                    More Videos
+                  </p>
+                  <Button
+                    variant="ghost"
+                    size="icon"
+                    className="rounded-full"
+                    onClick={() => sliderRef.current.slickNext()}
+                  >
+                    <DoubleArrowIcon size={16} />
+                  </Button>
+                </div>
               </div>
             </div>
           </div>
@@ -217,7 +245,7 @@ const Testimonials = () => {
         }}
       ></div>
       <div
-        className="hidden lg:block absolute bottom-40 left-0 z-0 h-[188px] w-full bg-[#EDEEF0]"
+        className="absolute bottom-80 lg:bottom-40 left-0 z-0 h-[188px] w-full bg-[#EDEEF0]"
         style={{
           boxShadow: "0px 11px 22px 0px #98989A inset",
         }}
