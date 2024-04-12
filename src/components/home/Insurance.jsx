@@ -4,9 +4,9 @@ import SectionHeading from "../common/Section/SectionHeading";
 /* eslint-disable @next/next/no-img-element */
 const Insurance = () => {
   return (
-    <section className="py-12 md:py-20">
+    <section className="relative lg:h-[758px] lg:container max-lg:py-12">
       {/* Small Device Heading */}
-      <div className="block md:hidden mb-8">
+      <div className="block lg:hidden mb-8">
         <h5
           className={`font-copperPlate text-primary text-lg font-semibold text-center`}
         >
@@ -20,32 +20,39 @@ const Insurance = () => {
       </div>
 
       {/* Big Device Content */}
-      <div className="flex flex-col md:flex-row items-center justify-center gap-12 md:gap-14">
+      <div className="flex flex-col lg:flex-row items-center justify-center gap-12 lg:gap-14 relative h-full">
         {/* Left Side */}
-        <div className="md:basis-5/12 text-center max-md:mx-8">
-          <img
-            src="/images/insurance/insurance.png"
-            alt="insurance"
-            className="text-center block mx-auto"
-          />
+        <div className="relative">
+          <div className="text-center max-lg:mx-8">
+            <img
+              src="/images/insurance/insurance.png"
+              alt="insurance"
+              className="text-center block mx-auto z-10 relative"
+            />
+          </div>
+          <div className="flex lg:hidden absolute z-0 left-0 top-1/2 -translate-y-1/2 items-center flex-col">
+            <img src="/images/insurance/bg_4.png" alt="bg" className="block h-28 sm:h-40 w-[100vw] -my-4" />
+            <img src="/images/insurance/bg_5.png" alt="bg" className="block h-28 sm:h-40 w-[100vw] -my-4" />
+            <img src="/images/insurance/bg_6.png" alt="bg" className="block h-28 sm:h-40 w-[100vw] -my-4" />
+          </div>
         </div>
 
         {/* Right Side */}
-        <div className="md:basis-7/12 max-md:container">
-          <div className="hidden md:block">
+        <div className=" max-lg:container">
+          <div className="hidden lg:block">
             <h5
-              className={`font-copperPlate text-primary text-xl font-semibold leading-[20px] text-left md:text-2xl`}
+              className={`font-copperPlate text-primary text-xl font-semibold leading-[20px] text-left lg:text-2xl`}
             >
               Let Us Handle The Finances
             </h5>
             <h2
-              className={`font-source image-text text-4xl font-bold md:text-5xl text-left xl:text-6xl  max-w-xl"`}
+              className={`font-source image-text text-4xl font-bold lg:text-5xl text-left xl:text-6xl  max-w-xl"`}
             >
               Insurance & Financing
             </h2>
           </div>
 
-          <div className="md:mt-10 flex flex-col items-center md:items-start gap-9 text-xs md:text-base max-w-lg text-center md:text-left">
+          <div className="lg:mt-10 flex flex-col items-center lg:items-start gap-9 text-xs lg:text-base max-w-lg text-center lg:text-left max-lg:mx-auto">
             <p>
               By conducting a detailed analysis of your benefits, we are able to
               offer you the most precise estimate of coverage available.
@@ -79,6 +86,13 @@ const Insurance = () => {
             </Marquee>
           </div>
         </div>
+      </div>
+
+      {/* Bg Element */}
+      <div className="hidden xl:flex absolute z-0 left-0 top-0 items-center">
+        <img src="/images/insurance/bg_1.png" alt="bg_1" />
+        <img src="/images/insurance/bg_2.png" alt="bg_2" />
+        <img src="/images/insurance/bg_3.png" alt="bg_3" />
       </div>
     </section>
   );
