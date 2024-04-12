@@ -72,7 +72,7 @@ const Testimonials = () => {
       <div className="md:container relative z-10">
         <div className="lg:flex lg:items-end lg:gap-8">
           {/* Left Side */}
-          <div className="w-full lg:w-7/12 pb-24">
+          <div className="w-full lg:w-7/12 lg:pb-24">
             <div
               className={`flex flex-col items-center lg:items-start justify-center gap-4`}
             >

@@ -4,17 +4,17 @@ import Marquee from "react-fast-marquee";
 
 const Gallery = () => {
   return (
-    <div className="pt-56  bg-[url('/images/gallry-bg.png')] bg-cover bg-top bg-no-repeat overflow-hidden ">
+    <div className="pt-32 md:pt-56 max-md:pb-20 bg-[url('/images/gallry-bg.png')] bg-cover bg-top bg-no-repeat overflow-hidden ">
       <div className="flex gap-10 2xl:container max-sm:container justify-between w-full ">
         <div className="flex justify-center items-center max-2xl:pl-32 max-sm:pl-0">
-          <div className="w-[350px]">
+          <div className="max-w-[350px] md:w-[350px]">
             <h3 className="text-primary xl:text-2xl text-xl font-bold  font-copperPlate">
               Transformation
             </h3>
-            <h2 className="xl:text-[64px] text-[32px] font-bold  font-source text-white">
+            <h2 className="lg:text-[64px] text-[32px] font-bold  font-source text-white">
               Gallery
             </h2>
-            <p className="xl:text-lg text-sm  max-w-xl mb-5 lg:mb-0  text-white">
+            <p className="md:text-lg text-xs max-w-xs md:max-w-xl text-white">
               Explore the stunning transformations achieved at our clinic, where
               cutting-edge technology meets expert care. Our portfolio
               highlights the journey to renewed confidence and radiant smiles,
@@ -22,7 +22,7 @@ const Gallery = () => {
             </p>
             <Button
               variant="outline"
-              className="hover:shadow-2xl px-8 font-semibold border-background bg-black text-white max-md:w-full mt-6 text-lg"
+              className="max-md:h-9 hover:shadow-2xl px-8 font-semibold border-background bg-black text-white mt-6 text-xs md:text-lg"
             >
               See All Photos
             </Button>
@@ -47,7 +47,7 @@ const Gallery = () => {
           </div>
         </div>
       </div>
-      <div className="">
+      <div className="max-md:mt-8">
         <Marquee autoFill>
           <div className="relative sm:h-[254px] sm:w-[383px] h-[157px] w-[220px]">
             <Image
