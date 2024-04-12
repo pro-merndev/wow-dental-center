@@ -1,5 +1,10 @@
 "use client";
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/shadcn/ui/accordion";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/shadcn/ui/accordion";
 import Image from "next/image";
 import { useState } from "react";
 
@@ -44,33 +49,74 @@ const FAQ = () => {
   ];
   return (
     <div className="md:pt-20 pt-10 container">
-      <h1 className="xl:text-[96px] text-[32px] font-source font-bold max-md:text-center">FAQ</h1>
+      <h1 className="xl:text-[96px] text-[32px] font-source font-bold max-md:text-center">
+        FAQ
+      </h1>
       <div className="md:grid grid-cols-2 gap-10 hidden">
         <div className="py-6">
-          <h3 className="text-[32px] font-bold mb-7">What should I expect during my first visit?</h3>
+          <h3 className="text-[32px] font-bold mb-7">
+            What should I expect during my first visit?
+          </h3>
           <p className="text-lg">
-            Your first visit involves a comprehensive dental examination, including digital X-rays, oral health assessment, and a discussion about
-            your dental history and goals. This helps us create a tailored treatment plan for you.
+            Your first visit involves a comprehensive dental examination,
+            including digital X-rays, oral health assessment, and a discussion
+            about your dental history and goals. This helps us create a tailored
+            treatment plan for you.
           </p>
         </div>
         <div className="p-6  grid grid-cols-2 gap-10">
-          <h3 className="text-[20px] font-bold">What payment options do you accept? </h3>
-          <h3 className="text-[20px] font-bold">What should I do if I have a toothache? </h3>
-          <h3 className="text-[20px] font-bold">Can you accommodate patients with dental anxiety?</h3>
-          <h3 className="text-[20px] font-bold">Do you offer teeth whitening services?</h3>
+          <h3 className="text-[20px] font-bold">
+            What payment options do you accept?{" "}
+          </h3>
+          <h3 className="text-[20px] font-bold">
+            What should I do if I have a toothache?{" "}
+          </h3>
+          <h3 className="text-[20px] font-bold">
+            Can you accommodate patients with dental anxiety?
+          </h3>
+          <h3 className="text-[20px] font-bold">
+            Do you offer teeth whitening services?
+          </h3>
           <h3 className="text-[20px] font-bold">Are dental X-rays safe? </h3>
-          <h3 className="text-[20px] font-bold">Do you offer emergency dental services? </h3>
+          <h3 className="text-[20px] font-bold">
+            Do you offer emergency dental services?{" "}
+          </h3>
         </div>
       </div>
-      <div className="md:hidden">
-        <Accordion type="single" collapsible className="w-full" value={activeAccordion} onValueChange={(value) => setActiveAccordion(value)}>
+      <div className="md:hidden px-4">
+        <Accordion
+          type="single"
+          collapsible
+          className="w-full"
+          value={activeAccordion}
+          onValueChange={(value) => setActiveAccordion(value)}
+        >
           {data.map((item) => (
-            <AccordionItem key={item.id} value={item.id} className={`px-4 py-4 `}>
-              <AccordionTrigger className={`text-base  sm:text-xl text-left text-[14px] font-bold`} style={{ textDecoration: "none" }}>
+            <AccordionItem
+              key={item.id}
+              value={item.id}
+              className={`md:px-4 md:py-4 `}
+            >
+              <AccordionTrigger
+                className={`text-base sm:text-xl text-left text-[14px] font-bold flex items-start`}
+                style={{ textDecoration: "none" }}
+              >
                 <span>{item.ques}</span>
-                <Image src={item.id === activeAccordion ? "/icons/mainus.svg" : "/icons/plus.svg"} alt="icon" width={8} height={8} />
+                <Image
+                  src={
+                    item.id === activeAccordion
+                      ? "/icons/mainus.svg"
+                      : "/icons/plus.svg"
+                  }
+                  alt="icon"
+                  width={10}
+                  height={10}
+                  className="mt-2"
+                />
               </AccordionTrigger>
-              <AccordionContent className="text-[12px]">{item.ans}</AccordionContent>
+              <AccordionContent className="text-[12px]">
+                {item.ans}
+              </AccordionContent>
             </AccordionItem>
           ))}
         </Accordion>

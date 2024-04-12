@@ -46,14 +46,14 @@ const data = [
 const WhatWeDo = () => {
   return (
     <div className="relative">
-      <div className="container py-20 ">
+      <div className="container py-8 md:py-20">
         <SectionHeading
           title="WHAT WE DO"
           description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
           bigTitle
         />
 
-        <div className="grid xl:grid-cols-3 lg:grid-cols-2 grid-cols-1 gap-7 mt-10 sm:p-10 ">
+        <div className="grid xl:grid-cols-3 lg:grid-cols-2 grid-cols-1 gap-7 mt-10 sm:p-10 max-md:mx-4">
           {data.map((item, index) => (
             <div
               key={index}
@@ -68,17 +68,17 @@ const WhatWeDo = () => {
                   className="w-full h-full"
                 />
                 <div className="sm:p-10 p-5">
-                  <h3 className="font-source sm:text-2xl md:text-3xl font-bold text-center px-5 sm:min-w-[203px] mx-auto">
+                  <h3 className="max-md:max-w-[210px] font-source sm:text-2xl md:text-3xl font-bold text-center px-5 sm:min-w-[203px] mx-auto">
                     {item.title}
                   </h3>
-                  <p className="text-center text-lg sm:mt-3 max-sm:text-base font-medium">
+                  <p className="text-center text-xs md:text-lg mt-3 max-sm:text-base font-medium">
                     {item.description}
                   </p>
 
                   <div className="absolute bottom-4 md:bottom-8 left-1/2 -translate-x-1/2">
-                    <Button className=" rounded-e-3xl rounded-es-3xl rounded-ss-none shadow-xl">
+                    <Button className="max-md:h-9 rounded-e-3xl rounded-es-3xl rounded-ss-none shadow-xl">
                       <InterfaceIcon height={15} width={15} />
-                      <span className="font-copperPlate text-lg ml-3">
+                      <span className="font-copperPlate text-xs md:text-lg ml-3">
                         Learn More
                       </span>
                     </Button>
@@ -90,9 +90,9 @@ const WhatWeDo = () => {
         </div>
 
         <div className="flex justify-center mt-10 max-sm:hidden">
-          <Button className="rounded-3xl shadow-primaryShadow">
+          <Button className="max-md:h-9 rounded-3xl shadow-primaryShadow">
             <WarningIcon size={20} />
-            <span className="font-copperPlate text-lg ml-3">
+            <span className="font-copperPlate text-xs md:text-lg ml-3">
               Emergency Dentistry Available
             </span>
           </Button>

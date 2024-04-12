@@ -24,11 +24,11 @@ const HomeContact = () => {
           <h2 className="xl:text-[64px] text-[32px] font-bold lg:text-left text-center font-source">
             Say Hi To The Team
           </h2>
-          <p className="xl:text-lg text-sm max-w-xl lg:text-left text-center mb-5">
+          <p className="xl:text-lg text-xs max-w-[230px] max-md:mx-auto md:max-w-xl lg:text-left text-center mb-5 max-md:mt-3">
             Reach out to our dedicated team for any inquiries or support, and
             let&apos;s start a conversation that makes a difference.
           </p>
-          <div className="mt-2 flex flex-col lg:max-w-lg  gap-4">
+          <div className="mt-2 flex flex-col lg:max-w-lg gap-3 md:gap-4">
             <div className="">
               <Input placeholder="Name" />
             </div>
@@ -40,7 +40,7 @@ const HomeContact = () => {
             </div>
           </div>
           <div className="lg:max-w-lg w-full mt-3">
-            <Button className="max-lg:w-full shadow-primaryShadow">
+            <Button className="max-md:h-10 text-xs md:text-lg max-lg:w-full shadow-primaryShadow">
               Send Message
             </Button>
           </div>

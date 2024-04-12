@@ -25,7 +25,7 @@ const GreatWork = () => {
   return (
     <div className="mt-12 relative min-h-[330px] w-full">
       <div className="relative z-10">
-        <h5 className="font-copperPlate text-2xl font-bold text-center">
+        <h5 className="font-copperPlate text-2xl font-bold text-center max-md:max-w-[210px] mx-auto">
           Great Work In Action
         </h5>
 
@@ -69,8 +69,8 @@ const GreatWork = () => {
             </div>
           </div>
 
-          {/* For Large Devices */}
-          <div className="hidden md:flex items-center justify-center gap-4">
+        {/* For Large Devices */}
+          <div className="hidden md:flex items-center justify-center gap-4 mt-8">
             {Array.from({ length: 6 }).map((_, i) => (
               <div
                 key={i}
@@ -83,7 +83,7 @@ const GreatWork = () => {
           </div>
         </div>
       </div>
-      <div className="absolute top-12 left-0 w-full z-0">
+      <div className="absolute top-28 md:top-12 left-0 w-full z-0">
         <img
           className="w-full h-[400px]"
           src="/images/about_cover.png"
