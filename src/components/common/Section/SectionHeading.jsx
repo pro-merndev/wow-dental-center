@@ -11,7 +11,7 @@ const SectionHeading = ({
       className={`flex flex-col items-center justify-center gap-4 ${
         !leftAlign ? "mx-auto text-center" : "text-left"
       } ${className ? className : ""}`}
-      // data-aos="fade-up"
+      data-aos="fade-up"
       // data-aos-once="false"
     >
       {subtitle && (

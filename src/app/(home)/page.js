@@ -1,3 +1,4 @@
+import Popup from "@/components/common/Popup/Popup";
 import Banner from "@/components/home/Banner";
 import FAQ from "@/components/home/FAQ";
 import Gallery from "@/components/home/Gallery";
@@ -11,6 +12,7 @@ export default function Home() {
   return (
     <>
       <Banner />
+      <Popup />
       <HomeAbout />
       <Welcome />
       <WhatWeDo />

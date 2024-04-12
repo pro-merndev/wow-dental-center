@@ -96,6 +96,12 @@ body {
   -webkit-text-fill-color: transparent;
 }
 
+.primary-image-text {
+  background: linear-gradient(rgba(255, 157, 0, .4), rgba(255, 157, 0, .4)), url("/images/text_bg.jpeg") center center / cover no-repeat;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 
 /* Great Work Slider */
 .video_wrapper {
