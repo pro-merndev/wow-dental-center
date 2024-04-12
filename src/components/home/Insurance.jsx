@@ -74,7 +74,7 @@ const Insurance = () => {
               the necessary care without financial stress.
             </p>
             <Marquee autoFill>
-              {Array.from({ length: 3 }).map((_, i) => (
+              {Array.from({ length: 5 }).map((_, i) => (
                 <div className="mx-8" key={i}>
                   <img
                     src={`/images/insurance/insurance_${i + 1}.png`}
