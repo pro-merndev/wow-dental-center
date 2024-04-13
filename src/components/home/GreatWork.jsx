@@ -5,6 +5,15 @@ import PlayIcon from "../icons/PlayIcon";
 import { Button } from "@/shadcn/ui/button";
 import DoubleArrowIcon from "../icons/DoubleArrowIcon";
 
+const reels = [
+  "/videos/reel_1.mp4",
+  "/videos/reel_2.mp4",
+  "/videos/reel_3.mp4",
+  "/videos/reel_4.mp4",
+  "/videos/reel_5.mp4",
+  "/videos/reel_6.mp4",
+];
+
 const GreatWork = () => {
   const sliderRef = useRef(null);
   const [activeSlide, setActiveSlide] = useState(2);
@@ -38,9 +47,9 @@ const GreatWork = () => {
               className="mx-auto text-center"
               ref={sliderRef}
             >
-              {Array.from({ length: 6 }).map((_, i) => (
+              {reels.map((reel, i) => (
                 <div className="px-4 mx-auto pt-8 pb-16" key={i}>
-                  <VideoItem />
+                  <VideoItem reel={reel} />
                 </div>
               ))}
             </Slider>
@@ -69,15 +78,15 @@ const GreatWork = () => {
             </div>
           </div>
 
-        {/* For Large Devices */}
+          {/* For Large Devices */}
           <div className="hidden md:flex items-center justify-center gap-4 mt-8">
-            {Array.from({ length: 6 }).map((_, i) => (
+            {reels.map((reel, i) => (
               <div
                 key={i}
                 className={`${activeSlide === i ? "slick-active" : ""}`}
                 onMouseEnter={() => setActiveSlide(i)}
               >
-                <VideoItem />
+                <VideoItem reel={reel} />
               </div>
             ))}
           </div>
@@ -94,11 +103,11 @@ const GreatWork = () => {
   );
 };
 
-const VideoItem = () => {
+const VideoItem = ({ reel }) => {
   return (
     <div className={`video_wrapper relative group`}>
       <video
-        src="/videos/video.mov"
+        src={reel}
         style={{
           width: "100%",
           height: "100%",

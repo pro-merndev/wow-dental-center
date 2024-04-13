@@ -15,19 +15,16 @@ const HomeAbout = () => {
           leftAlign
           className="block md:hidden"
         />
-        <div className="flex items-center flex-col md:flex-row gap-8 md:gap-32">
+        <div className="flex items-center flex-col md:flex-row gap-8">
           {/* Left Side */}
-          <div
-            className="max-md:ml-8 max-md:mr-12 relative max-md:mt-8"
-            data-aos="fade-up"
-          >
+          <div className="relative max-md:mt-8 md:basis-5/12" data-aos="fade-up">
             <Image
               src="/images/about_1.png"
               alt="about"
-              width={411}
-              height={664}
+              width={500}
+              height={590}
               priority
-              className="z-10 relative"
+              className="z-10 relative md:ml-auto"
             />
             {/* <Image
               src="/images/about_bg.png"
