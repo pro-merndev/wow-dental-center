@@ -22,20 +22,20 @@ const HomeAbout = () => {
             data-aos="fade-up"
           >
             <Image
-              src="/images/about.png"
+              src="/images/about_1.png"
               alt="about"
               width={411}
               height={664}
               priority
               className="z-10 relative"
             />
-            <Image
+            {/* <Image
               src="/images/about_bg.png"
               alt="about"
               width={411}
               height={664}
               className="block absolute left-5 top-5 z-0"
-            />
+            /> */}
           </div>
 
           <div data-aos="fade-up">
