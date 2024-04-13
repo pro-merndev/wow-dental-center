@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import { Button } from "@/shadcn/ui/button";
 import Image from "next/image";
 import Marquee from "react-fast-marquee";
@@ -30,39 +31,26 @@ const Gallery = () => {
         </div>
         <div className="max-sm:hidden">
           <div className="relative h-[370px] w-[517px]">
-            <Image
-              src="/images/gallery/pic-1.png"
-              alt="gallery"
-              layout="fill"
-            />
+            <Image src="/images/gallery/1.png" alt="gallery" layout="fill" />
           </div>
         </div>
         <div className="max-sm:hidden">
           <div className="relative h-[370px] w-[517px]">
-            <Image
-              src="/images/gallery/pic-2.png"
-              alt="gallery"
-              layout="fill"
-            />
+            <Image src="/images/gallery/2.png" alt="gallery" layout="fill" />
           </div>
         </div>
       </div>
       <div className="max-md:mt-8">
         <Marquee autoFill className="">
-          <div className="relative">
-            <img
-              src="/images/gallery/pic-1.png"
-              alt="gallery"
-              className="md:h-[278px] md:w-[383px] h-[143px] w-[220px] block -mx-2"
-            />
-          </div>
-          <div className="relative ">
-            <img
-              src="/images/gallery/pic-3.png"
-              alt="gallery"
-              className="md:h-[300px] md:w-[383px] h-[157px] w-[220px] block -mx-2"  
-            />
-          </div>
+          {Array.from({ length: 7 }).map((_, i) => (
+            <div className="relative -mx-3" key={i}>
+              <img
+                src={`/images/gallery/${i + 4}.png`}
+                alt="gallery"
+                className="md:h-[278px] md:w-[383px] h-[143px] w-[220px] block object-cover"
+              />
+            </div>
+          ))}
         </Marquee>
       </div>
     </div>

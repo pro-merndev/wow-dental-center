@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 "use client";
 
 import { useEffect, useRef, useState } from "react";
@@ -12,18 +13,28 @@ const testimonials = [
     name: "John Doe",
     title: "CEO, Company",
     src: "/videos/testimonial_1.mp4",
+    type: "video",
   },
   {
     id: 2,
     name: "Jane Doe",
     title: "CEO, Company",
-    src: "/videos/video.mov",
+    src: "/videos/testimonial_2.mp4",
+    type: "video",
   },
   {
     id: 3,
     name: "John Doe",
     title: "CEO, Company",
-    src: "/videos/video.mov",
+    src: "/images/testimonial/3.png",
+    type: "image",
+  },
+  {
+    id: 4,
+    name: "John Doe",
+    title: "CEO, Company",
+    src: "/images/testimonial/4.png",
+    type: "image",
   },
 ];
 
@@ -103,22 +114,40 @@ const Testimonials = () => {
 
               {/* For Large Devices */}
               <div className="mt-4 hidden lg:grid grid-cols-3 gap-x-4">
-                {testimonials.map((item, i) => (
-                  <div
-                    key={i}
-                    className="w-full h-[310px] md:w-[192px] rounded-3xl overflow-hidden shadow-2xl"
-                    onClick={() => setActiveVideo(item)}
-                  >
-                    <video
-                      src={item.src}
-                      style={{
-                        width: "100%",
-                        height: "100%",
-                        objectFit: "cover",
-                      }}
-                    ></video>
-                  </div>
-                ))}
+                {testimonials
+                  .filter((item) => item.id !== activeVideo?.id)
+                  .map((item, i) => (
+                    <div
+                      key={i}
+                      className="w-full h-[310px] md:w-[192px] rounded-3xl overflow-hidden shadow-2xl"
+                    >
+                      {item.type === "video" ? (
+                        <div
+                          className="cursor-pointer"
+                          onClick={() => setActiveVideo(item)}
+                        >
+                          <video
+                            src={item.src}
+                            style={{
+                              width: "100%",
+                              height: "100%",
+                              objectFit: "cover",
+                            }}
+                          ></video>
+                        </div>
+                      ) : (
+                        <img
+                          src={item.src}
+                          alt="testimonial"
+                          style={{
+                            width: "100%",
+                            height: "100%",
+                            objectFit: "cover",
+                          }}
+                        />
+                      )}
+                    </div>
+                  ))}
               </div>
 
               {/* For Small Devices */}
@@ -242,43 +271,60 @@ const TestimonialItem = ({ item }) => {
     <div className="px-4 pb-16">
       <div className="relative">
         <div className="w-[260px] h-[426px] rounded-tr-3xl rounded-bl-3xl overflow-hidden shadow-xl">
-          <video
-            src={item.src}
-            ref={videoRef}
-            style={{
-              width: "100%",
-              height: "100%",
-              objectFit: "cover",
-            }}
-            controls
-          ></video>
-        </div>
-
-        <div
-          className="absolute left-0 bottom-20  py-4 text-white px-8"
-          style={{
-            background:
-              "linear-gradient(89.97deg, #000000 61.92%, rgba(255, 255, 255, 0) 99.97%)",
-          }}
-        >
-          <p className="text-xl font-semibold font-copperPlate">{item?.name}</p>
-          <p>{item?.title}</p>
-        </div>
-
-        <div
-          className="absolute right-12 bottom-[-35px] w-[60px] md:w-[70px] h-[60px] md:h-[70px] bg-[#171717] rounded-full grid place-items-center"
-          style={{ boxShadow: "11px 11px 22px 0px #98989A" }}
-          onClick={togglePlayPause}
-        >
-          {paused ? (
-            <PlayIcon color="#fff" size={20} />
+          {item?.type === "video" ? (
+            <video
+              src={item.src}
+              ref={videoRef}
+              style={{
+                width: "100%",
+                height: "100%",
+                objectFit: "cover",
+              }}
+              controls
+            ></video>
           ) : (
-            <div className="flex items-center justify-center gap-2">
-              <div className="bg-white h-4 w-[3px] rounded"></div>
-              <div className="bg-white h-4 w-[3px] rounded"></div>
-            </div>
+            <img
+              src={item.src}
+              alt="testimonial"
+              style={{
+                width: "100%",
+                height: "100%",
+                objectFit: "cover",
+              }}
+            />
           )}
         </div>
+
+        {item?.type === "video" && (
+          <>
+            <div
+              className="absolute left-0 bottom-20  py-4 text-white px-8"
+              style={{
+                background:
+                  "linear-gradient(89.97deg, #000000 61.92%, rgba(255, 255, 255, 0) 99.97%)",
+              }}
+            >
+              <p className="text-xl font-semibold font-copperPlate">
+                {item?.name}
+              </p>
+              <p>{item?.title}</p>
+            </div>
+            <div
+              className="absolute right-12 bottom-[-35px] w-[60px] md:w-[70px] h-[60px] md:h-[70px] bg-[#171717] rounded-full grid place-items-center"
+              style={{ boxShadow: "11px 11px 22px 0px #98989A" }}
+              onClick={togglePlayPause}
+            >
+              {paused ? (
+                <PlayIcon color="#fff" size={20} />
+              ) : (
+                <div className="flex items-center justify-center gap-2">
+                  <div className="bg-white h-4 w-[3px] rounded"></div>
+                  <div className="bg-white h-4 w-[3px] rounded"></div>
+                </div>
+              )}
+            </div>
+          </>
+        )}
       </div>
     </div>
   );
