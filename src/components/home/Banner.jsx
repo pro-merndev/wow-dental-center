@@ -82,15 +82,15 @@ const Banner = () => {
             <div className="flex flex-col gap-6 text-black">
               <Input
                 placeholder="Name"
-                className="placeholder:text-black placeholder:font-bold pl-[20px]"
+                className="placeholder:font-bold pl-[20px]"
               />
               <Input
                 placeholder="Email"
-                className="placeholder:text-black placeholder:font-bold pl-[20px]"
+                className="placeholder:font-bold pl-[20px]"
               />
               <Input
                 placeholder="Phone Number"
-                className="placeholder:text-black placeholder:font-bold pl-[20px]"
+                className="placeholder:font-bold pl-[20px]"
               />
               <Button className="bg-primary py-4 font-bold">
                 Schedule Appointment
