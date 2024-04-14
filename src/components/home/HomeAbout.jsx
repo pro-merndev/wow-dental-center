@@ -14,7 +14,7 @@ const HomeAbout = () => {
         <SectionHeading
           subtitle="Fort Lauderdale, FL"
           title="Meet Your Dentist, Silvana Beraj DMD"
-          leftAlign
+          leftAlign={windowWidth > 1024 ? true : false}
           className="block lg:hidden"
         />
         <div className="flex items-center flex-col lg:flex-row gap-8">

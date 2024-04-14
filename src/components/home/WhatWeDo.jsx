@@ -67,8 +67,8 @@ const WhatWeDo = () => {
                   alt="what-we-do"
                   className="w-full h-full"
                 />
-                <div className="sm:p-10 p-5">
-                  <h3 className="max-md:max-w-[210px] font-source sm:text-2xl md:text-3xl font-bold text-center px-5 sm:min-w-[203px] mx-auto">
+                <div className="lg:p-10 p-5">
+                  <h3 className="max-md:max-w-[210px] font-source sm:text-2xl lg:text-3xl font-bold text-center px-5 sm:min-w-[203px] mx-auto">
                     {item.title}
                   </h3>
                   <p className="text-center text-xs sm:text-sm md:text-lg mt-3 font-medium">
@@ -76,9 +76,9 @@ const WhatWeDo = () => {
                   </p>
 
                   <div className="absolute bottom-4 md:bottom-8 left-1/2 -translate-x-1/2">
-                    <Button className="max-md:h-9 rounded-e-3xl rounded-es-3xl rounded-ss-none shadow-xl">
+                    <Button className="max-lg:h-9 rounded-e-3xl rounded-es-3xl rounded-ss-none shadow-xl text-sm">
                       <InterfaceIcon height={15} width={15} />
-                      <span className="font-copperPlate text-xs md:text-base ml-3">
+                      <span className="font-copperPlate text-xs lg:text-base ml-3">
                         Learn More
                       </span>
                     </Button>
@@ -98,13 +98,13 @@ const WhatWeDo = () => {
           </Button>
         </div>
       </div>
-      <div className="absolute left-0 md:top-20 top-44 z-10">
+      <div className="absolute left-0 lg:top-20 md:top-40 top-44 z-0">
         <img src="/images/left-ellipse.png" alt="what-we-do-bg" />
       </div>
-      <div className="absolute right-0 md:bottom-20 bottom-1/2 z-10">
+      <div className="absolute right-0 bottom-[35%] sm:bottom-[25%] lg:bottom-0 z-0">
         <img src="/images/right-ellipse.png" alt="what-we-do-bg" />
       </div>
-      <div className="absolute md:hidden left-0 bottom-20  z-10">
+      <div className="absolute lg:hidden left-0 bottom-20  z-0">
         <img src="/images/left-ellipse.png" alt="what-we-do-bg" />
       </div>
     </div>

@@ -76,7 +76,7 @@ const Banner = () => {
 
           {/* Right Side Form */}
           <div
-            className="md:w-full md:basis-5/12 bg-[#D9D9D9] bg-opacity-25 border border-white p-4 md:p-10  w-full md:h-[515px] backdrop-blur-[5px] max-md:pb-6 max-md:max-w-[450px] max-md:auto"
+            className="md:w-full md:basis-5/12 bg-[#D9D9D9] bg-opacity-25 border border-white p-4 md:p-10  w-full md:h-[515px] backdrop-blur-[5px] max-md:pb-6 max-lg:max-w-[450px] max-md:auto"
             data-aos="fade-up"
           >
             <div className="flex flex-col gap-3 lg:gap-6 text-black">

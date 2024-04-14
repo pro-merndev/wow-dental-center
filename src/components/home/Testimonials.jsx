@@ -80,7 +80,7 @@ const Testimonials = () => {
 
   return (
     <section className="py-12 md:py-32 relative">
-      <div className="md:container relative z-10">
+      <div className="xl:container relative z-10">
         <div className="lg:flex lg:items-end lg:gap-8 w-full md:w-[85%] mx-auto">
           {/* Left Side */}
           <div className="w-full lg:w-7/12 lg:pb-24">
@@ -186,7 +186,7 @@ const Testimonials = () => {
 
           {/* Right Side */}
           <div className="hidden lg:block lg:w-5/12 relative">
-            <div className="w-[520px] h-[832px] rounded-tr-3xl rounded-bl-3xl overflow-hidden shadow-2xl ">
+            <div className="w-[450px] xl:w-[520px] h:[752px] xl:h-[832px] rounded-tr-3xl rounded-bl-3xl overflow-hidden shadow-2xl ">
               {activeVideo && (
                 <video
                   src={activeVideo.src}

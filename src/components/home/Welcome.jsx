@@ -16,13 +16,13 @@ const Welcome = () => {
         />
 
         <div className="flex justify-center flex-wrap gap-6 mt-10">
-          <Button className="max-md:h-9 rounded-e-3xl rounded-es-3xl rounded-ss-none shadow-primaryShadow">
+          <Button className="max-lg:h-9 rounded-e-3xl rounded-es-3xl rounded-ss-none shadow-primaryShadow">
             <InterfaceIcon height={15} width={15} />
-            <span className="font-copperPlate text-lg max-md:text-xs ml-3">Learn More</span>
+            <span className="font-copperPlate text-lg max-lg:text-xs ml-3">Learn More</span>
           </Button>
-          <Button className="max-md:h-9 rounded-e-3xl rounded-es-3xl rounded-ss-none shadow-primaryShadow bg-primary">
+          <Button className="max-lg:h-9 rounded-e-3xl rounded-es-3xl rounded-ss-none shadow-primaryShadow bg-primary">
             <InterfaceIcon height={15} width={15} />
-            <span className="font-copperPlate text-lg max-md:text-xs ml-3">
+            <span className="font-copperPlate text-lg max-lg:text-xs ml-3">
               Schedule Appointment
             </span>
           </Button>
