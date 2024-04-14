@@ -54,11 +54,11 @@ const FAQ = () => {
   };
 
   return (
-    <div className="md:pt-20 pt-10 container">
-      <h1 className="xl:text-[96px] text-[32px] font-source font-bold max-md:text-center">
+    <div className="lg:pt-20 pt-10 container">
+      <h1 className="xl:text-[96px] text-[32px] font-source font-bold max-lg:text-center">
         FAQ
       </h1>
-      <div className="md:grid grid-cols-2 gap-10 hidden">
+      <div className="lg:grid grid-cols-2 gap-10 hidden">
         <div className="py-6">
           <h3 className="text-[32px] font-bold mb-7">{activeAccordion.ques}</h3>
           <p className="text-lg">{activeAccordion.ans}</p>
@@ -75,7 +75,7 @@ const FAQ = () => {
           ))}
         </div>
       </div>
-      <div className="md:hidden px-4">
+      <div className="lg:hidden px-4">
         <Accordion
           type="single"
           collapsible
@@ -87,7 +87,7 @@ const FAQ = () => {
             <AccordionItem
               key={item.id}
               value={item.id}
-              className={`md:px-4 md:py-4 `}
+              className={`lg:px-4 lg:py-4 `}
             >
               <AccordionTrigger
                 className={`text-base sm:text-xl text-left text-[14px] font-bold flex items-start`}

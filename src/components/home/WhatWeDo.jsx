@@ -53,7 +53,7 @@ const WhatWeDo = () => {
           bigTitle
         />
 
-        <div className="grid xl:grid-cols-3 lg:grid-cols-2 grid-cols-1 gap-7 mt-10 sm:p-10 max-md:mx-4">
+        <div className="grid xl:grid-cols-3 lg:grid-cols-2 sm:grid-cols-2 grid-cols-1 gap-7 mt-10 sm:p-10 max-md:mx-4">
           {data.map((item, index) => (
             <div
               key={index}
@@ -71,7 +71,7 @@ const WhatWeDo = () => {
                   <h3 className="max-md:max-w-[210px] font-source sm:text-2xl md:text-3xl font-bold text-center px-5 sm:min-w-[203px] mx-auto">
                     {item.title}
                   </h3>
-                  <p className="text-center text-xs md:text-lg mt-3 max-sm:text-base font-medium">
+                  <p className="text-center text-xs sm:text-sm md:text-lg mt-3 font-medium">
                     {item.description}
                   </p>
 

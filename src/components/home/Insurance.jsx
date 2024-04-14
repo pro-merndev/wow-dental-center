@@ -20,14 +20,14 @@ const Insurance = () => {
       </div>
 
       {/* Big Device Content */}
-      <div className="flex flex-col lg:flex-row items-center justify-center gap-12 lg:gap-24 relative h-full">
+      <div className="flex flex-col lg:flex-row items-center justify-center sm:gap-12 lg:gap-24 relative h-full">
         {/* Left Side */}
         <div className="relative">
           <div className="text-center max-lg:mx-8">
             <img
               src="/images/insurance/insurance.png"
               alt="insurance"
-              className="text-center block mx-auto z-10 relative"
+              className="text-center block mx-auto z-10 relative p-10 md:p-0"
             />
           </div>
           <div className="flex lg:hidden absolute z-0 left-0 top-1/2 -translate-y-1/2 items-center flex-col">
@@ -52,7 +52,7 @@ const Insurance = () => {
             </h2>
           </div>
 
-          <div className="lg:mt-10 flex flex-col items-center lg:items-start gap-9 text-xs lg:text-base max-w-lg text-center lg:text-left max-lg:mx-auto">
+          <div className="lg:mt-10 flex flex-col items-center lg:items-start gap-9 text-xs sm:text-sm lg:text-base max-w-lg text-center lg:text-left max-lg:mx-auto">
             <p>
               By conducting a detailed analysis of your benefits, we are able to
               offer you the most precise estimate of coverage available.

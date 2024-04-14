@@ -41,7 +41,7 @@ const Banner = () => {
             <h6 className="block md:hidden font-source font-semibold max-w-[185px] mb-4">
               3000 E Commercial Blvd, Fort Lauderdale, FL
             </h6>
-            <h1 className="font-source text-5xl md:text-[96px] font-bold leading-[48px] md:leading-[96px]">
+            <h1 className="font-source text-5xl md:text-[96px] font-bold leading-[48px] md:leading-[96px] max-md:max-w-md">
               <span className="text-primary">
                 Waves <span className="text-3xl md:text-4xl">of</span> Welcoming
               </span>{" "}
@@ -64,22 +64,22 @@ const Banner = () => {
             </div>
 
             <div className="block md:hidden my-8">
-              <button className="font-semibold bg-white text-black md:rounded-[17px] rounded-[8px] flex items-center px-2 text-sm w-[202px] md:w-[217px]">
+              <button className="font-semibold bg-white text-black md:rounded-[17px] rounded-[8px] flex items-center px-2 text-sm">
                 <PhoneIcon size={12} className="ml-[6px] md:ml-0" />
                 <div className="h-10 w-[1px] bg-black mx-4"></div>
-                <p className="md:font-bold font-[800px] text-base">Call (754) 274 0675</p>
+                <p className="md:font-bold font-[800px] text-base">
+                  Call (754) 274 0675
+                </p>
               </button>
             </div>
           </div>
 
           {/* Right Side Form */}
           <div
-            className="md:w-full md:basis-5/12 bg-[#D9D9D9] bg-opacity-25 border border-white p-4 md:p-10 
-             w-full md:h-[515px] backdrop-blur-[5px] max-md:pb-6
-            "
+            className="md:w-full md:basis-5/12 bg-[#D9D9D9] bg-opacity-25 border border-white p-4 md:p-10  w-full md:h-[515px] backdrop-blur-[5px] max-md:pb-6 max-md:max-w-[450px] max-md:auto"
             data-aos="fade-up"
           >
-            <div className="flex flex-col gap-6 text-black">
+            <div className="flex flex-col gap-3 lg:gap-6 text-black">
               <Input
                 placeholder="Name"
                 className="placeholder:font-bold pl-[20px]"

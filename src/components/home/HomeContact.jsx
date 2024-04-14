@@ -1,17 +1,21 @@
+"use client";
+
 import { Button } from "@/shadcn/ui/button";
 import { Input } from "@/shadcn/ui/input";
 import { Textarea } from "@/shadcn/ui/textarea";
+import { useWindowWidth } from "@react-hook/window-size";
 import Image from "next/image";
 
 const HomeContact = () => {
+  const windowWidth = useWindowWidth();
   return (
     <div className="grid lg:grid-cols-2 grid-cols-1 md:py-20 py-10 gap-10">
       <div className="flex justify-center items-center">
         <Image
           src="/images/map-img.png"
           alt="logo"
-          width={750}
-          height={530}
+          width={windowWidth < 550 ? 750 : 530}
+          height={windowWidth < 550 ? 530 : 650}
           className="lg:rounded-e-3xl shadow-2xl"
         />
       </div>
@@ -36,7 +40,11 @@ const HomeContact = () => {
               <Input placeholder="Email" className="py-[20px] pl-[20px] " />
             </div>
             <div className="">
-              <Textarea placeholder="Message" rows={5} className="pl-[20px] pt-[10px]" />
+              <Textarea
+                placeholder="Message"
+                rows={5}
+                className="pl-[20px] pt-[10px]"
+              />
             </div>
           </div>
           <div className="lg:max-w-lg w-full mt-3">

@@ -4,27 +4,32 @@ import { Button } from "@/shadcn/ui/button";
 import Image from "next/image";
 import SectionHeading from "../common/Section/SectionHeading";
 import GreatWork from "./GreatWork";
+import { useWindowWidth } from "@react-hook/window-size";
 
 const HomeAbout = () => {
+  const windowWidth = useWindowWidth();
   return (
-    <section className="py-16 md:py-32">
+    <section className="py-16 lg:py-32">
       <div className="container">
         <SectionHeading
           subtitle="Fort Lauderdale, FL"
           title="Meet Your Dentist, Silvana Beraj DMD"
           leftAlign
-          className="block md:hidden"
+          className="block lg:hidden"
         />
-        <div className="flex items-center flex-col md:flex-row gap-8">
+        <div className="flex items-center flex-col lg:flex-row gap-8">
           {/* Left Side */}
-          <div className="relative max-md:mt-8 md:basis-5/12" data-aos="fade-up">
+          <div
+            className="relative max-lg:mt-8 lg:basis-5/12"
+            data-aos="fade-up"
+          >
             <Image
               src="/images/about_1.png"
               alt="about"
-              width={500}
-              height={590}
+              width={windowWidth > 768 ? 500 : 400}
+              height={windowWidth > 768 ? 590 : 310}
               priority
-              className="z-10 relative md:ml-auto"
+              className="z-10 relative lg:ml-auto"
             />
             {/* <Image
               src="/images/about_bg.png"
@@ -40,10 +45,10 @@ const HomeAbout = () => {
               subtitle="Fort Lauderdale, FL"
               title="Meet Your Dentist, Silvana Beraj DMD"
               leftAlign
-              className="hidden md:block"
+              className="hidden lg:block"
             />
 
-            <p className="mt-8 max-w-xl text-lg max-md:text-xs">
+            <p className="mt-8 max-w-xl text-lg max-md:text-xs max-lg:text-sm">
               Dr. Silvana Beraj, DMD, MSc, PhD, stands out in the dental field
               with her extensive education and practice in Fixed Prosthodontics
               and Dental Occlusion, highlighted by her academic journey from
@@ -54,16 +59,16 @@ const HomeAbout = () => {
               presentations.{" "}
             </p>
 
-            <p className="my-4 font-bold text-lg max-md:text-xs">
+            <p className="my-4 font-bold text-lg max-md:text-xs max-lg:text-sm">
               arcu non sodales neque sodales ut etiam sit
             </p>
-            <div className="flex flex-col sm:flex-row items-center gap-3 md:gap-6">
-              <Button className="max-md:text-xs text-lg px-12 font-semibold max-md:w-full shadow-primaryShadow">
+            <div className="flex flex-col sm:flex-row items-center gap-3 lg:gap-6">
+              <Button className="max-md:text-xs max-lg:text-sm text-lg px-12 font-semibold max-lg:w-full shadow-primaryShadow">
                 Read More
               </Button>
               <Button
                 variant="outline"
-                className="max-md:text-xs text-lg px-12 font-semibold border-black max-md:w-full"
+                className="max-md:text-xs max-lg:text-sm text-lg px-12 font-semibold border-black max-lg:w-full"
                 style={{ boxShadow: "-11px -11px 22px 0px #FFFFFF" }}
               >
                 Specialized Tools
