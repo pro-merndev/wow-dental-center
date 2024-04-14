@@ -1,22 +1,18 @@
+/* eslint-disable @next/next/no-img-element */
 "use client";
 
 import { Button } from "@/shadcn/ui/button";
 import { Input } from "@/shadcn/ui/input";
 import { Textarea } from "@/shadcn/ui/textarea";
-import { useWindowWidth } from "@react-hook/window-size";
-import Image from "next/image";
 
 const HomeContact = () => {
-  const windowWidth = useWindowWidth();
   return (
     <div className="grid lg:grid-cols-2 grid-cols-1 md:py-20 py-10 gap-10">
       <div className="flex justify-center items-center">
-        <Image
+        <img
           src="/images/map-img.png"
           alt="logo"
-          width={windowWidth < 550 ? 750 : 530}
-          height={windowWidth < 550 ? 530 : 650}
-          className="lg:rounded-e-3xl shadow-2xl"
+          className="lg:rounded-e-3xl shadow-2xl w-[550px] h-[350px] object-cover md:w-[750px] md:h-[530px]"
         />
       </div>
 
