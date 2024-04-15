@@ -12,7 +12,7 @@ const HomeContact = () => {
         <img
           src="/images/map-img.png"
           alt="logo"
-          className="lg:rounded-e-3xl shadow-2xl w-[550px] h-[350px] object-cover md:w-[750px] md:h-[530px]"
+          className="lg:rounded-e-3xl shadow-2xl w-[90%] h-auto object-cover sm:w-[550px] lg:w-[750px] sm:h-[350px] lg:h-[530px]"
         />
       </div>
 

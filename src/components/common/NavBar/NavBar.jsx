@@ -104,9 +104,12 @@ const NavBar = () => {
               <p>Call (754) 274 0675</p>
             </button>
           </div>
-          <div className={`absolute top-full left-0 font-medium`}>
-            <p className="text-white my-4">Monday - Friday, 9AM to 6PM</p>
-            <p className="text-white max-w-xs">
+          <div className={`absolute top-full left-0 font-medium max-w-xs`}>
+            <p className="text-white my-4">
+              Monday to Friday, 9AM to 5PM
+              <br /> Saturday 10am to 2pm
+            </p>
+            <p className="text-white">
               3000 E Commercial Blvd, Fort Lauderdale, FL 33308
             </p>
           </div>
